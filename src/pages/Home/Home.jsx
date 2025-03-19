@@ -3,9 +3,8 @@ export default function Home() {
     <div className="layout">
       <main className="home">
         <h1>
-          <span className="highlight">
-            🚀 Domina el inglés y abre un mundo de oportunidades 🌍
-          </span>
+          <span className="highlight">🚀 Domina el inglés</span>y abre un mundo
+          de oportunidades 🌍
         </h1>
         <h2>
           Aprende de manera rápida, divertida y efectiva. ¡Comienza hoy y
