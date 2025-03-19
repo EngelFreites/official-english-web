@@ -1,3 +1,4 @@
+import "./plans.css";
 import { FaHandshake } from "react-icons/fa";
 import { IoMdSpeedometer } from "react-icons/io";
 import { FaAward } from "react-icons/fa";
