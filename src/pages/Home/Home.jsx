@@ -1,3 +1,5 @@
+import Button from "../../component/Button/Button";
+import "./home.css";
 export default function Home() {
   return (
     <div className="layout">
@@ -10,7 +12,7 @@ export default function Home() {
           Aprende de manera rápida, divertida y efectiva. ¡Comienza hoy y
           transforma tu futuro!
         </h2>
-        <button className="start-button">Start Now</button>
+        <Button>Start Now</Button>
       </main>
       <secction className="content-img">
         <div className="img"></div>
