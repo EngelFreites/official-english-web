@@ -8,9 +8,12 @@
 .container-plans {
   display: flex;
   flex-direction: column;
+  grid-column: 1/13;
+  padding: 128px 0;
 }
 .container-card-and-plans {
   display: flex;
+  gap: 64px;
 }
 
 .subtitle-plans {
@@ -18,7 +21,6 @@
   font-family: "poppins", sans-serif;
   font-size: 20px;
   align-self: start;
-  margin-left: 32px;
   color: #757575;
 }
 
@@ -29,7 +31,7 @@
   position: relative;
   display: inline-block;
   align-self: start;
-  margin-left: 32px;
+  margin-bottom: 4px;
 }
 
 .title-plans::before {
@@ -49,7 +51,6 @@
   flex-direction: column;
   flex-wrap: wrap;
   gap: 24px;
-  padding: 32px;
 }
 
 .card-plan {
@@ -125,7 +126,6 @@
   flex-direction: column;
   gap: 32px;
   align-items: center;
-  padding: 0 32px;
   text-align: center;
 }
 
@@ -146,13 +146,12 @@
 }
 
 .content-plan {
-  padding: 0 140px;
+  padding-left: 64px;
 }
 
 .underline {
   width: 120px;
-  margin-left: 32px;
-  margin-top: 12px;
+  margin: 16px 0;
 }
 
 .card-plan-active {
