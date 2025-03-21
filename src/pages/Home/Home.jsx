@@ -20,6 +20,12 @@ export default function Home() {
                 Inicio
               </a>
               <a
+                href="/Home2"
+                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium"
+              >
+                Home 2
+              </a>
+              <a
                 href="#"
                 className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium"
               >
