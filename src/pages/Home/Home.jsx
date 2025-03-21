@@ -3,7 +3,6 @@ import { GraduationCap, Globe2, Menu } from "lucide-react";
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
-      {/* Header */}
       <header className="fixed w-full bg-white/80 backdrop-blur-sm shadow-sm z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
@@ -12,7 +11,6 @@ export default function Home() {
               <span className="ml-2 text-xl font-bold text-gray-900"></span>
             </div>
 
-            {/* Desktop Navigation */}
             <nav className="hidden md:flex space-x-8">
               <a
                 href="#"
@@ -40,7 +38,6 @@ export default function Home() {
               </a>
             </nav>
 
-            {/* Mobile menu button */}
             <div className="md:hidden">
               <button className="p-2 rounded-md text-gray-700 hover:text-blue-600">
                 <Menu className="h-6 w-6" />
@@ -50,7 +47,6 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Hero Section */}
       <div className="relative pt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 lg:pt-12">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -125,7 +121,6 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
 
-              {/* Floating achievement card */}
               <div className="absolute -bottom-6 -left-6 bg-white rounded-lg shadow-xl p-4 w-64">
                 <div className="flex items-center gap-3 mb-2">
                   <div className="bg-yellow-100 p-2 rounded-lg">
