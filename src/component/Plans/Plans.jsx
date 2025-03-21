@@ -1,121 +1,106 @@
-import "./plans.css";
-import plans from "../../data/plans.js";
 import { useState } from "react";
-import { FcNext } from "react-icons/fc";
-import { FcFactory } from "react-icons/fc";
-import { FcGlobe } from "react-icons/fc";
-import { FcCollaboration } from "react-icons/fc";
-import { FcCalendar } from "react-icons/fc";
+import {
+  FcNext,
+  FcFactory,
+  FcGlobe,
+  FcCollaboration,
+  FcCalendar,
+} from "react-icons/fc";
+import { plans, plansList } from "../../data/plans.js";
 
 export default function Plans() {
   const [plan, setPlan] = useState("corporate");
+
+  const iconPlans = {
+    corporate: <FcFactory size={40} />,
+    intensive: <FcCalendar size={40} />,
+    certifications: <FcGlobe size={40} />,
+    conversation: <FcCollaboration size={40} />,
+  };
+
   return (
-    <div className="container-plans">
-      <h1 className="title-plans">Nuestros Planes</h1>
-      <p className="subtitle-plans underline-zigzag ">
+    <div className="flex flex-col py-32 px-6 max-w-7xl mx-auto" id="Plans">
+      <h1 className="text-4xl font-black text-gray-800 relative inline-block mb-2">
+        Nuestros Planes
+        <span className="absolute left-0 bottom-1 w-80 h-2 bg-yellow-200 opacity-60 rounded-md"></span>
+      </h1>
+      <p className="text-lg text-gray-600">
         Te ofrecemos opciones diseñadas para cada necesidad y objetivo:
       </p>
-      <div className="underline">
-        <img src="/subrayado.png" alt="subrayado" />
-      </div>
-      <section className="container-card-and-plans">
-        <div className="container-card">
-          <a
-            className={plan === "corporate" ? "card-plan-active" : "card-plan"}
-            onClick={() => setPlan("corporate")}
-          >
-            <div className="content-icon-plan-corporate">
-              <FcFactory size={40} />
-            </div>
-            <div>
-              <h2 className="title-plan">Plan Corporativo</h2>
-              <p className="text-plan">
-                Inglés flexible para potenciar equipos en el ámbito laboral y
-                social.
-              </p>
-            </div>
-            <FcNext size={40} />
-          </a>
-
-          <a
-            className={plan === "intensive" ? "card-plan-active" : "card-plan"}
-            onClick={() => setPlan("intensive")}
-          >
-            <div className="content-icon-plan-calendar">
-              <FcCalendar size={40} />
-            </div>
-            <div>
-              <h2 className="title-plan">Plan Intensivo</h2>
-              <p className="text-plan">
-                Entrenamiento intensivo de inglés para objetivos puntuales y
-                consolidación rápida.
-              </p>
-            </div>
-            <FcNext size={48} />
-          </a>
-
-          <a
-            className={
-              plan === "certifications" ? "card-plan-active" : "card-plan"
-            }
-            onClick={() => setPlan("certifications")}
-          >
-            <div className="content-icon-plan-globe">
-              <FcGlobe size={40} />
-            </div>
-            <div>
-              <h2 className="title-plan">Certificaciones Internacionales</h2>
-              <p className="text-plan">
-                Opcionalidad de exámenes internacionales con gestión completa de
-                inscripciones.
-              </p>
-            </div>
-            <FcNext size={48} />
-          </a>
-          <a
-            className={
-              plan === "conversation" ? "card-plan-active" : "card-plan"
-            }
-            onClick={() => setPlan("conversation")}
-          >
-            <div className="content-icon-plan-collaboration">
-              <FcCollaboration size={40} />
-            </div>
-            <div>
-              <h2 className="title-plan">Conversacion</h2>
-              <p className="text-plan">
-                Práctica oral activa en un ambiente relajado, ideal para
-                mantener la fluidez en inglés.
-              </p>
-            </div>
-            <FcNext size={48} />
-          </a>
-        </div>
-        <section className="section-plans">
-          {plan !== "" && (
-            <div className="content-plan">
-              <h2 className="title-plan-section">{plans[plan].title}</h2>
-              <p className="text-plan-section">{plans[plan].text}</p>
-            </div>
+      <div className="flex flex-col lg:flex-row gap-16 mt-8">
+        <div className="flex flex-col gap-6 w-full">
+          {plansList.map(
+            ([key, { icon, title, text, backgroundColor }]) => (
+              console.log(key),
+              (
+                <a
+                  key={key}
+                  onClick={() => setPlan(key)}
+                  className={`flex items-center gap-4 p-4 rounded-lg shadow-md  transition-all cursor-pointer ${
+                    plan === key
+                      ? "border-2 border-blue-300 bg-blue-50"
+                      : "bg-white"
+                  }`}
+                  href={`#${key}`}
+                >
+                  <div
+                    className={`p-2 ${backgroundColor} rounded-full flex items-center justify-center`}
+                  >
+                    {iconPlans[icon]}
+                  </div>
+                  <div className="flex-1 text-left">
+                    <h2 className="text-lg font-semibold text-gray-800">
+                      {title}
+                    </h2>
+                    <p className="text-sm text-gray-600">{text}</p>
+                  </div>
+                  <FcNext size={40} />
+                </a>
+              )
+            )
           )}
-
-          <img
-            src="/cuadrado.png"
-            className="cuadrado figure"
-            width={40}
-            alt=""
-          />
-          <img src="/puntos.png" className="point figure" alt="" />
-          <img src="/estrella.png" className="start figure" alt="" />
-          <img src="/triangulo.png" className="triangule figure" alt="" />
+        </div>
+        <div className="flex flex-col items-center text-center max-w-full  max-w-2xl relative">
+          {plans.map(
+            ([key, { title, text }]) =>
+              plan === key && (
+                <div className="text-left px-8 max-w-7xl">
+                  <h2 className="text-2xl font-bold text-gray-800 mb-4 whitespace-pre-line text-center">
+                    {title}
+                  </h2>
+                  <p className="text-lg text-gray-700 whitespace-pre-line">
+                    {text}
+                  </p>
+                </div>
+              )
+          )}
           <img
             src="/circulo.png"
-            className="circule figure"
-            width={40}
+            className=" hidden sm:block left-24 absolute w-6 "
             alt=""
           />
-        </section>
-      </section>
+          <img
+            src="/cuadrado.png"
+            className=" left-32 top-5 hidden sm:block absolute w-6 "
+            alt=""
+          />
+          <img
+            src="/triangulo.png"
+            className=" left-14 hidden sm:block top-5 absolute w-6"
+            alt=""
+          />
+          <img
+            src="/estrella.png"
+            className=" right-36 top-4 hidden sm:block absolute w-6 "
+            alt=""
+          />
+          <img
+            src="/puntos.png"
+            className=" right-20  hidden sm:block absolute w-6 rotate-45"
+            alt=""
+          />
+        </div>
+      </div>
     </div>
   );
 }
