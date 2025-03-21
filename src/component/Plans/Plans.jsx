@@ -16,7 +16,7 @@ export default function Plans() {
         Te ofrecemos opciones diseñadas para cada necesidad y objetivo:
       </p>
       <div className="underline">
-        <img src="/subrayado.jpg" alt="subrayado" />
+        <img src="/subrayado.png" alt="subrayado" />
       </div>
       <section className="container-card-and-plans">
         <div className="container-card">
@@ -98,6 +98,22 @@ export default function Plans() {
               <p className="text-plan-section">{plans[plan].text}</p>
             </div>
           )}
+
+          <img
+            src="/cuadrado.png"
+            className="cuadrado figure"
+            width={40}
+            alt=""
+          />
+          <img src="/puntos.png" className="point figure" alt="" />
+          <img src="/estrella.png" className="start figure" alt="" />
+          <img src="/triangulo.png" className="triangule figure" alt="" />
+          <img
+            src="/circulo.png"
+            className="circule figure"
+            width={40}
+            alt=""
+          />
         </section>
       </section>
     </div>
