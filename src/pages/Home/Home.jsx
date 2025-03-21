@@ -1,4 +1,5 @@
 import { GraduationCap, Globe2, Menu } from "lucide-react";
+import Plans from "../../component/Plans/Plans";
 
 export default function Home() {
   return (
@@ -25,10 +26,10 @@ export default function Home() {
                 Sobre nosotros
               </a>
               <a
-                href="#"
+                href="#Plans"
                 className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium"
               >
-                Cursos
+                Nuestros Planes
               </a>
               <a
                 href="#"
@@ -140,6 +141,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Plans />
     </div>
   );
 }

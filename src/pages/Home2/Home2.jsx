@@ -7,6 +7,7 @@ import {
   BookOpen,
   Trophy,
 } from "lucide-react";
+import Plans from "../../component/Plans/Plans";
 
 function Home2() {
   return (
@@ -197,6 +198,7 @@ function Home2() {
             </div>
           </div>
         </section>
+        <Plans />
       </main>
     </div>
   );
