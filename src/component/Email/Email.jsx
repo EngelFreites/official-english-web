@@ -57,7 +57,7 @@ export default function Email() {
 
   return (
     <div className="max-w-5xl mx-auto p-4 mb-8 bg-gradient-to-r from-indigo-400 to-purple-600 rounded-lg">
-      <div className="bg-white p-6 rounded-lg gap-2 flex">
+      <div className="bg-white p-6 rounded-lg gap-2 flex justify-center">
         <div className="flex lg:flex-row gap-8 flex-col">
           <div className="flex flex-col">
             <h2 className="text-2xl pl-12 font-black text-gray-800 relative inline-block mb-2 whitespace-pre-line">
