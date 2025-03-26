@@ -1,6 +1,6 @@
 import { GraduationCap, Globe2, Menu } from "lucide-react";
 import Plans from "../../component/Plans/Plans";
-
+import Email from "../../component/Email/Email";
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
@@ -148,6 +148,7 @@ export default function Home() {
         </div>
       </div>
       <Plans />
+      <Email />
     </div>
   );
 }

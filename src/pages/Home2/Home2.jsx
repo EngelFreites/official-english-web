@@ -8,6 +8,7 @@ import {
   Trophy,
 } from "lucide-react";
 import Plans from "../../component/Plans/Plans";
+import Email from "../../component/Email/Email";
 
 function Home2() {
   return (
@@ -199,6 +200,7 @@ function Home2() {
           </div>
         </section>
         <Plans />
+        <Email />
       </main>
     </div>
   );
