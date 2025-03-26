@@ -57,8 +57,8 @@ export default function Email() {
 
   return (
     <div className="max-w-5xl mx-auto p-4 mb-8 bg-gradient-to-r from-indigo-400 to-purple-600 rounded-lg">
-      <div className="bg-white p-6 rounded-lg">
-        <div className="flex">
+      <div className="bg-white p-6 rounded-lg gap-2 flex">
+        <div className="flex lg:flex-row gap-8 flex-col">
           <div className="flex flex-col">
             <h2 className="text-2xl pl-12 font-black text-gray-800 relative inline-block mb-2 whitespace-pre-line">
               {`¡Contáctanos y comienza\ntu camino hoy! ✨`}
@@ -68,7 +68,7 @@ export default function Email() {
               className="flex flex-col gap-4 pl-12  pr-8 "
               onSubmit={handleSumit}
             >
-              <div className="flex  gap-6">
+              <div className="flex flex-col lg:flex-row  gap-6">
                 <div className="flex flex-col">
                   <input
                     type="text"
@@ -83,7 +83,7 @@ export default function Email() {
                   )}
                 </div>
 
-                <div className="flex flex-col">
+                <div className="flex flex-col ">
                   <input
                     type="text"
                     value={form.email}
@@ -126,7 +126,7 @@ export default function Email() {
             </form>
           </div>
 
-          <div className="pl-8  border-l-2 border-indigo-300 ">
+          <div className="pl-8  lg:border-l-2  border-indigo-300 ">
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
               Si tienes alguna duda, contáctanos. Estaremos encantados de
               atenderte.
