@@ -56,54 +56,56 @@ export default function Email() {
   };
 
   return (
-    <div className="max-w-5xl mx-auto p-4 mb-8 bg-gradient-to-r from-indigo-400 to-purple-600 rounded-lg">
-      <div className="bg-white p-6 rounded-lg gap-2 flex justify-center">
-        <div className="flex lg:flex-row gap-8 flex-col">
+    <div className="max-w-4xl mx-auto p-4 mb-8 bg-gradient-to-r from-indigo-400 to-purple-600 rounded-lg">
+      <div className="relative bg-white p-6 rounded-lg gap-2 flex  rounded-tr-4xl clip-path-1">
+
+        <div className="flex justify-between w-full lg:flex-row gap-8 flex-col">
           <div className="flex flex-col">
-            <h2 className="text-2xl pl-12 font-black text-gray-800 relative inline-block mb-2 whitespace-pre-line">
-              {`¡Contáctanos y comienza\ntu camino hoy! ✨`}
+            <h2 className="text-2xl  font-black text-gray-800 relative inline-block">
+              ¡Contáctanos y comienza<br />tu camino hoy! ✨
             </h2>
             <form
               action=""
-              className="flex flex-col gap-4 pl-12  pr-8 "
+              className="flex flex-col  gap-12 mt-8 h-full "
               onSubmit={handleSumit}
             >
-              <div className="flex flex-col lg:flex-row  gap-6">
-                <div className="flex flex-col">
-                  <input
-                    type="text"
-                    value={form.name}
-                    name="name"
-                    onChange={handleChange}
-                    className="peer border-b border-black p-2 focus:outline-none focus:border-indigo-500  placeholder-gray-400 focus:placeholder-indigo-500  "
-                    placeholder="Nombre"
-                  />
-                  {errors.name && (
-                    <p className="text-red-500 text-sm">{errors.name}</p>
-                  )}
-                </div>
+              <div className="flex flex-col gap-4">
+                <div className="flex flex-col lg:flex-row gap-4 ">
+                  <div className="flex flex-col">
+                    <input
+                      type="text"
+                      value={form.name}
+                      name="name"
+                      onChange={handleChange}
+                      className="peer border-b border-gray-400 p-2 focus:outline-none focus:border-indigo-500  placeholder-gray-400 focus:placeholder-indigo-500  "
+                      placeholder="Nombre"
+                    />
+                    {errors.name && (
+                      <p className="text-red-500 text-sm">{errors.name}</p>
+                    )}
+                  </div>
 
-                <div className="flex flex-col ">
-                  <input
-                    type="text"
-                    value={form.email}
-                    name="email"
-                    onChange={handleChange}
-                    placeholder="Correo Electronico"
-                    className="border-b border-black p-2peer border-b border-black p-2 focus:outline-none focus:border-indigo-500  placeholder-gray-400 focus:placeholder-indigo-500  "
-                  />
-                  {errors.email && (
-                    <p className="text-red-500 text-sm">{errors.email}</p>
-                  )}
+                  <div className="flex flex-col ">
+                    <input
+                      type="text"
+                      value={form.email}
+                      name="email"
+                      onChange={handleChange}
+                      placeholder="Correo Electronico"
+                      className="border-b border-gray-400 p-2peer  p-2 focus:outline-none focus:border-indigo-500  placeholder-gray-400 focus:placeholder-indigo-500  "
+                    />
+                    {errors.email && (
+                      <p className="text-red-500 text-sm">{errors.email}</p>
+                    )}
+                  </div>
                 </div>
-              </div>
 
               <div>
                 <div className="flex flex-col">
                   <input
                     type="text"
                     name="message"
-                    className=" peer border-b border-black p-2 focus:outline-none focus:border-indigo-500  placeholder-gray-400 focus:placeholder-indigo-500"
+                    className=" peer border-b border-gray-400 p-2 focus:outline-none focus:border-indigo-500  placeholder-gray-400 focus:placeholder-indigo-500"
                     onChange={handleChange}
                     value={form.message}
                     placeholder="Asuntos"
@@ -115,24 +117,27 @@ export default function Email() {
                   )}
                 </div>
               </div>
-
-              <button className="px-8 py-4 bg-indigo-600 text-white rounded-4xl font-semibold hover:bg-blue-700 transition-colors flex justify-center gap-2 w-64">
+          
+              </div>
+        
+              <button type="submit" className="bg-indigo-700 text-sm text-white w-44 flex items-center justify-center py-2 rounded-4xl">
                 Enviar Consulta
-                <span className="bg-white text-indigo-700  p-1  aling-center  rounded-full">
-                  {" "}
-                  <FcNext size={20} />
-                </span>
+                <span className="bg-white w-6 h-6 flex items-center justify-center rounded-full ml-4"> <FcNext/> </span>
               </button>
+              
+
+        
+     
             </form>
           </div>
 
-          <div className="pl-8  lg:border-l-2  border-indigo-300 ">
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Si tienes alguna duda, contáctanos. Estaremos encantados de
-              atenderte.
-            </p>
+            <div className=" w-72 p-6 bg-indigo-50 flex flex-col justify-center rounded-sm overflow-hidden clip-path-2">
+  
+            <h2 className="text-lg text-left font-black text-gray-800 relative inline-block border-b border-gray-400 pb-2 mb-2">
+              ¡Aprende inglés de manera fácil y efectiva! ✨
+            </h2>
 
-            <div className="space-y-4">
+            <div className="space-y-2 mt-4">
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5" />
                 <span>+1 234 567 890</span>
