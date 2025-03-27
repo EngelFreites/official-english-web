@@ -53,7 +53,7 @@ export default function Plans() {
             </a>
           ))}
         </div>
-        <div className="flex flex-col items-center text-center max-w-full  max-w-2xl relative">
+        <div className="flex flex-col items-center text-center max-w-full relative">
           {plans.map(
             ([key, { title, text }]) =>
               plan === key && (
