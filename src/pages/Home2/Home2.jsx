@@ -9,11 +9,12 @@ import {
 } from "lucide-react";
 import Plans from "../../component/Plans/Plans";
 import Email from "../../component/Email/Email";
+import AboutSection from "../../component/Aboutsection/AboutSection";
 
 function Home2() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
+     
       <header className="fixed w-full bg-white shadow-sm z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
@@ -154,51 +155,9 @@ function Home2() {
           </div>
         </section>
 
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
-              <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-                <div className="bg-indigo-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
-                  <Users className="h-6 w-6 text-indigo-600" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
-                  Profesores Nativos
-                </h3>
-                <p className="text-gray-600">
-                  Aprende con profesores nativos certificados que te ayudarán a
-                  desarrollar un acento natural y entender las expresiones
-                  cotidianas.
-                </p>
-              </div>
+        <AboutSection />
 
-              <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-                <div className="bg-indigo-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
-                  <MessageSquare className="h-6 w-6 text-indigo-600" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
-                  Práctica Constante
-                </h3>
-                <p className="text-gray-600">
-                  Grupos reducidos y sesiones de conversación que te permiten
-                  practicar el idioma de forma intensiva y natural.
-                </p>
-              </div>
-
-              <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-                <div className="bg-indigo-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
-                  <Trophy className="h-6 w-6 text-indigo-600" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
-                  Resultados Garantizados
-                </h3>
-                <p className="text-gray-600">
-                  Nuestro método probado garantiza que alcanzarás tus objetivos
-                  de aprendizaje en el menor tiempo posible.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+       
         <Plans />
         <Email />
       </main>
