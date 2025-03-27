@@ -10,7 +10,7 @@ import {
 import Plans from "../../component/Plans/Plans";
 import Email from "../../component/Email/Email";
 import AboutSection from "../../component/Aboutsection/AboutSection";
-
+import { Link } from "react-router";
 function Home2() {
   return (
     <div className="min-h-screen bg-white">
@@ -26,36 +26,36 @@ function Home2() {
             </div>
 
             <nav className="hidden md:flex space-x-8">
-              <a
-                href="#"
+              <Link to="/"
+              
                 className="text-gray-700 hover:text-indigo-600 px-3 py-2 text-sm font-medium"
               >
                 Inicio
-              </a>
-              <a
+              </Link>
+              <Link to="/Home2"
                 href="#"
                 className="text-gray-700 hover:text-indigo-600 px-3 py-2 text-sm font-medium"
               >
                 Metodología
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#"
                 className="text-gray-700 hover:text-indigo-600 px-3 py-2 text-sm font-medium"
               >
                 Profesores
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#"
                 className="text-gray-700 hover:text-indigo-600 px-3 py-2 text-sm font-medium"
               >
                 Precios
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#"
                 className="text-gray-700 hover:text-indigo-600 px-3 py-2 text-sm font-medium"
               >
                 Contacto
-              </a>
+              </Link>
             </nav>
 
             <div className="md:hidden">
