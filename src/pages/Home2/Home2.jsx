@@ -11,7 +11,10 @@ import Plans from "../../component/Plans/Plans";
 import Email from "../../component/Email/Email";
 import AboutSection from "../../component/Aboutsection/AboutSection";
 import { Link } from "react-router";
+
 import ClientesLogos from "../../component/ClientsLogos/ClientesLogos";
+import StudentReviews from "../../component/StudentReviews/StudentReviews";
+
 function Home2() {
   return (
     <div className="min-h-screen bg-white">
@@ -161,6 +164,7 @@ function Home2() {
         <AboutSection />
        
         <Plans />
+        <StudentReviews />
         <Email />
       </main>
     </div>
