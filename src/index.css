@@ -4,12 +4,28 @@
 @tailwind utilities;
 
 
+*{
+  box-sizing: border-box;
+}
+
+.logo-slide-track {
+  animation: slide 30s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 .clip-path-1{
-  clip-path: polygon(30% 0%, 95% 0, 100% 14%, 100% 100%, 70% 100%, 0 100%, 0% 70%, 0 0)
+  clip-path: polygon(30% 0%, 95% 0, 100% 14%, 100% 100%, 70% 100%, 0 100%, 0% 70%, 0 0);
 }
 
 .clip-path-2{
-  clip-path: polygon(30% 0%, 89% 0, 100% 14%, 100% 100%, 70% 100%, 0 100%, 0% 70%, 0 0)
+  clip-path: polygon(30% 0%, 89% 0, 100% 14%, 100% 100%, 70% 100%, 0 100%, 0% 70%, 0 0);
 } 
 
 .animate-scroll{
@@ -20,6 +36,7 @@
   animation-range: entry 25% cover 50%;
 }
 
+
 @keyframes scroll {
 
   from{
@@ -27,8 +44,22 @@
   }
 
   to {
-    opacity: 10; 
+    opacity: 1; 
   }
   
   
+}
+
+@layer components {
+  .logo-slider {
+    @apply relative overflow-hidden before:absolute before:left-0 before:top-0 before:z-10 before:w-[50px] before:h-full before:bg-gradient-to-r before:from-white before:to-transparent after:absolute after:right-0 after:top-0 after:z-10 after:w-[50px] after:h-full after:bg-gradient-to-l after:from-white after:to-transparent;
+  }
+
+  .logo-slide-track {
+    @apply flex items-center; /* Remove animate-slide */
+  }
+
+  .logo-slide {
+    @apply min-w-[150px];
+  }
 }
