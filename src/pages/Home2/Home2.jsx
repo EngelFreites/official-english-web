@@ -11,9 +11,9 @@ import Plans from "../../component/Plans/Plans";
 import Email from "../../component/Email/Email";
 import AboutSection from "../../component/Aboutsection/AboutSection";
 import { Link } from "react-router";
-
 import ClientesLogos from "../../component/ClientsLogos/ClientesLogos";
 import StudentReviews from "../../component/StudentReviews/StudentReviews";
+import Footer from "../../component/Footer/Footer";
 
 function Home2() {
   return (
@@ -167,6 +167,7 @@ function Home2() {
         <StudentReviews />
         <Email />
       </main>
+      <Footer />
     </div>
   );
 }
