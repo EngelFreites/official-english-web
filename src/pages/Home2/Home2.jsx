@@ -14,6 +14,7 @@ import { Link } from "react-router";
 
 import ClientesLogos from "../../component/ClientsLogos/ClientesLogos";
 import StudentReviews from "../../component/StudentReviews/StudentReviews";
+import FeaturesSection from "../../component/FeaturesSection/FeaturesSection";
 
 function Home2() {
   return (
@@ -164,6 +165,7 @@ function Home2() {
         <AboutSection />
        
         <Plans />
+        <FeaturesSection />
         <StudentReviews />
         <Email />
       </main>
