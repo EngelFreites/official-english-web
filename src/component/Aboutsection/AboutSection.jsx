@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { FaChalkboardTeacher, FaUsers, FaBookOpen, FaGlobeAmericas } from "react-icons/fa";
+import { FaChalkboardTeacher,FaBookOpen, FaGlobeAmericas } from "react-icons/fa";
+
 
 export default function AboutSection() {
   return (
@@ -34,70 +35,7 @@ export default function AboutSection() {
 
       </div>
 
-      
-        <section className=" relative max-w-7xl mx-auto py-16 px-6 md:px-16">
-      
-      
-        <div className="absolute top-20 right-0 w-40 h-40 bg-blue-200 rounded-full z-[-1]"></div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-      
-          <motion.div
-            className=" animate-scroll flex flex-col  border-1 border-indigo-300 items-center p-8 rounded-lg shadow-md transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-105"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            whileHover={{ scale: 1.05 }}
-          >
-            <div className="bg-indigo-100 p-4 rounded-full mb-4">
-              <FaChalkboardTeacher className="text-indigo-600 text-4xl" />
-            </div>
-            <h3 className="text-lg font-semibold text-gray-800 text-center">Profesores Certificados</h3>
-            <p className="text-gray-600 text-center mt-2">Aprende con profesionales cualificados.</p>
-          </motion.div>
-
-          <motion.div
-            className=" animate-scroll flex flex-col items-center border-1  border-indigo-300 p-8 rounded-lg shadow-md transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-105"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            whileHover={{ scale: 1.05 }}
-          >
-            <div className="bg-pink-100 p-4 rounded-full mb-4">
-              <FaBookOpen className="text-pink-600 text-4xl" />
-            </div>
-            <h3 className="text-lg font-semibold text-gray-800 text-center">Material Actualizado</h3>
-            <p className="text-gray-600 text-center mt-2">Acceso a recursos de aprendizaje modernos y relevantes.</p>
-          </motion.div>
-
-          <motion.div
-            className=" animate-scroll flex flex-col items-center border-1  border-indigo-300 p-8 rounded-lg shadow-md transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-105"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            whileHover={{ scale: 1.05 }}
-          >
-            <div className="bg-green-100 p-4 rounded-full mb-4">
-              <FaUsers className="text-green-600 text-4xl" />
-            </div>
-            <h3 className="text-lg font-semibold text-gray-800 text-center">Coaches Expertos</h3>
-            <p className="text-gray-600 text-center mt-2">Recibe guía y apoyo de coaches experimentados.</p>
-          </motion.div>
-
-          <motion.div
-            className=" animate-scroll flex flex-col items-center border-1 border-indigo-300 p-8 rounded-lg shadow-md transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-105"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            whileHover={{ scale: 1.05 }}
-          >
-            <div className="bg-yellow-100 p-4 rounded-full mb-4">
-              <FaGlobeAmericas className="text-yellow-600 text-4xl" />
-            </div>
-            <h3 className="text-lg font-semibold text-gray-800 text-center">Inmersión Cultural</h3>
-            <p className="text-gray-600 text-center mt-2">Sumérgete en la cultura para un aprendizaje más profundo.</p>
-          </motion.div>
-        </div>
-      </section>                 
+               
     </section>
   );
 }
