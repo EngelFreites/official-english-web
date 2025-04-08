@@ -35,10 +35,9 @@ export default function Plans() {
               onClick={() => setPlan(key)}
               className={`flex items-center gap-4 p-4 rounded-lg shadow-md  transition-all cursor-pointer ${
                 plan === key
-                  ? "border-2 border-blue-300 bg-blue-50"
+                  ? "border-1  border-indigo-400 bg-blue-50"
                   : "bg-white"
               }`}
-              href={`#${key}`}
             >
               <div
                 className={`p-2 ${backgroundColor} rounded-full flex items-center justify-center`}
