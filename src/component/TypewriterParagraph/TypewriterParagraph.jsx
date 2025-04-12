@@ -1,4 +1,3 @@
-import { div } from 'framer-motion/client';
 import { useEffect, useState } from 'react';
 
 export default function TypewriterParagraph() {
