@@ -1,26 +1,26 @@
-import { motion, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
-  
+
+const underlineVariants = {
+  hidden: { width: 0 },
+  visible: (custom) => ({
+    width: `${custom}px`,
+    transition: { duration: 0.6, ease: "easeOut" },
+  }),
+};
 
 export default function Title({ children, margin }) {
-  const controls = useAnimation();
   const [ref, inView] = useInView({ triggerOnce: true });
-
-  useEffect(() => {
-    if (inView) {
-      controls.start({ width: `${margin}px` });
-    }
-  }, [inView, controls, margin]);
 
   return (
     <h1 ref={ref} className="text-4xl font-black text-gray-800 relative inline-block mb-8">
       {children}
       <motion.span
         className="absolute left-0 bottom-1 h-2 bg-yellow-300 opacity-60 rounded-md"
-        initial={{ width: 0 }}
-        animate={controls}
-        transition={{ duration: 0.6, ease: "easeOut" }}
+        variants={underlineVariants}
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        custom={margin}
       />
     </h1>
   );
