@@ -20,17 +20,13 @@ import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 function Home2() {
   const count = useMotionValue(0);
   const rounded = useTransform(count, Math.round);
-  const [show, setShow] = useState(false);
 
   useEffect(() => {
     const animation = animate(count, 5000, { duration: 5 });
     return animation.stop;
   }, []);
 
-  useEffect(() => {
-    const timer = setTimeout(() => setShow(true), 100); 
-    return () => clearTimeout(timer);
-  }, []);
+
 
 
   return (
@@ -100,12 +96,8 @@ function Home2() {
                   </span>
                 </div>
 
-                <h1
-                  className={`text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6 transition-all duration-1000 ease-out
-                    ${show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}
-                  `}
-                >
-                Domina el inglés con profesores nativos certificados 🎓
+                <h1 className='text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6 animate-title'>
+                  Domina el inglés con profesores nativos certificados 🎓
                 </h1>
 
                 <TypewriterParagraph />
