@@ -100,7 +100,9 @@ function Home2() {
                   Domina el inglés con profesores nativos certificados 🎓
                 </h1>
 
-                <TypewriterParagraph />
+                <TypewriterParagraph>
+                  Nuestro método único te ayuda a pensar y hablar en inglés de forma natural. Aprenderás el idioma como lo hacen los nativos, con ejercicios prácticos y conversación real.
+                </TypewriterParagraph>
 
                 <div className="flex flex-col sm:flex-row gap-4 mb-12">
                   <button className="px-8 py-4 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition-colors">
