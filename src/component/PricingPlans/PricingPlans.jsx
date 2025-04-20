@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import get_plans from "../../lib/get_plans";
-import { BlocksRenderer } from "@strapi/blocks-react-renderer";
+import { FourSquare } from "react-loading-indicators";
 
 export default function PricingPlans() {
   const [data, setData] = useState([]);
@@ -13,7 +13,14 @@ export default function PricingPlans() {
 
   console.log("data response:", data[0]);
 
-  if (data.length === 0) return null;
+  if (data.length === 0) {
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <FourSquare color="#818cf8" size="medium" text="" textColor="" />
+      </div>
+    );
+  }
+
   return (
     <div className="flex flex-col items-center py-32 px-6 max-w-7xl mx-auto">
       <h1 className="text-4xl font-black text-gray-800 mb-2">
