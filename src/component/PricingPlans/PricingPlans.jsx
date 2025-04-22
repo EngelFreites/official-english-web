@@ -22,11 +22,15 @@ export default function PricingPlans() {
   }
 
   return (
-    <div className="flex flex-col items-center py-32 px-6 max-w-7xl mx-auto">
-      <h1 className="text-4xl font-black text-gray-800 mb-2">
+    <div className="flex relative flex-col items-center py-32 px-6 max-w-7xl mx-auto">
+      <div className="w-60 h-60 absolute blur-3xl left-16 top-40 rounded-full bg-indigo-200"></div>
+      <div className="w-40 h-40 absolute blur-3xl right-16 bottom-20 rounded-full bg-yellow-200"></div>
+      <div className="w-40 h-40 absolute blur-3xl bottom-14 left-96 rounded-full bg-green-200"></div>
+      <div className="w-40 h-40 absolute blur-3xl right-80 top-20 rounded-full bg-orange-200"></div>
+      <h1 className="text-4xl font-black text-gray-800 mb-2 z-9">
         Simple, affordable plans
       </h1>
-      <p className="text-lg text-gray-500 mb-16">
+      <p className="text-lg text-gray-500 mb-16 z-10">
         Choose the plan that fits your needs
       </p>
 
