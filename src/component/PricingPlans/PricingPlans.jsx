@@ -11,8 +11,6 @@ export default function PricingPlans() {
     });
   }, []);
 
-  console.log("data response:", data[0]);
-
   if (data.length === 0) {
     return (
       <div className="flex justify-center items-center h-screen">
@@ -69,7 +67,7 @@ export default function PricingPlans() {
           return (
             <div
               key={index}
-              className="flex flex-col w-68  bg-white border border-indigo-200 rounded-3xl shadow-md p-6 transition-all hover:shadow-xl hover:-translate-y-1"
+              className="flex flex-col w-68  bg-white border border-indigo-200 rounded-3xl shadow-md z-9 p-6 transition-all hover:shadow-xl hover:-translate-y-1"
             >
               <p className="text-indigo-600 font-semibold mb-2">
                 {item.attributes.title}
