@@ -3,11 +3,13 @@ import { useState } from "react";
 import { z } from "zod";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { FcNext } from "react-icons/fc";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const formSchema = z.object({
   name: z.string().min(1, "El nombre es obligatorio"),
   email: z.string().email("Correo electrónico no válido"),
   message: z.string().min(3, "El mensaje debe tener al menos 3 caracteres"),
+  captcha: z.string().min(1, "El captcha es obligatorio"),
 });
 
 export default function Email() {
@@ -15,8 +17,19 @@ export default function Email() {
     name: "",
     email: "",
     message: "",
+    captcha: "",
   });
   const [errors, setErrors] = useState({});
+
+  const onChange = (e) => {
+    if (e !== null) {
+      setForm({
+        ...form,
+        captcha: e,
+      });
+    }
+  };
+
   const handleSumit = async (e) => {
     e.preventDefault();
 
@@ -28,6 +41,7 @@ export default function Email() {
         name: formattedErrors.name?._errors[0] || "",
         email: formattedErrors.email?._errors[0] || "",
         message: formattedErrors.message?._errors[0] || "",
+        captcha: formattedErrors.captcha?._errors[0] || "",
       });
       return;
     }
@@ -58,15 +72,16 @@ export default function Email() {
   return (
     <div className="max-w-4xl mx-auto p-4 mb-8 bg-gradient-to-r from-indigo-400 to-purple-600 rounded-lg">
       <div className="relative bg-white p-6 rounded-lg gap-2 flex  rounded-tr-4xl clip-path-1">
-
-        <div className="flex justify-between w-full lg:flex-row gap-8 flex-col">
+        <div className="flex justify-between w-full md:flex-row gap-8 flex-col">
           <div className="flex flex-col">
             <h2 className="text-2xl  font-black text-gray-800 relative inline-block">
-              ¡Contáctanos y comienza<br />tu camino hoy! ✨
+              ¡Contáctanos y comienza
+              <br />
+              tu camino hoy! ✨
             </h2>
             <form
               action=""
-              className="flex flex-col  gap-12 mt-8 h-full "
+              className="flex flex-col  gap-6 mt-8 h-full "
               onSubmit={handleSumit}
             >
               <div className="flex flex-col gap-4">
@@ -100,39 +115,45 @@ export default function Email() {
                   </div>
                 </div>
 
-              <div>
-                <div className="flex flex-col">
-                  <input
-                    type="text"
-                    name="message"
-                    className=" peer border-b border-gray-400 p-2 focus:outline-none focus:border-indigo-500  placeholder-gray-400 focus:placeholder-indigo-500"
-                    onChange={handleChange}
-                    value={form.message}
-                    placeholder="Asuntos"
-                  />
-                  {errors.message && (
-                    <p className="text-red-500 text-sm  w-sm">
-                      {errors.message}
-                    </p>
-                  )}
+                <div>
+                  <div className="flex flex-col">
+                    <input
+                      type="text"
+                      name="message"
+                      className=" peer border-b border-gray-400 p-2 focus:outline-none focus:border-indigo-500  placeholder-gray-400 focus:placeholder-indigo-500"
+                      onChange={handleChange}
+                      value={form.message}
+                      placeholder="Asuntos"
+                    />
+                    {errors.message && (
+                      <p className="text-red-500 text-sm  w-sm">
+                        {errors.message}
+                      </p>
+                    )}
+                  </div>
                 </div>
               </div>
-          
-              </div>
-        
-              <button type="submit" className="bg-indigo-700 text-sm text-white w-44 flex items-center justify-center py-2 rounded-4xl">
+              <ReCAPTCHA
+                sitekey="6Lf86iArAAAAAMe8FNLY56O2_WarMB8pKnJK6xwF"
+                onChange={onChange}
+              />
+              {errors.captcha && (
+                <p className="text-red-500 text-sm">{errors.captcha}</p>
+              )}
+              <button
+                type="submit"
+                className="bg-indigo-700 text-sm text-white w-44 flex items-center justify-center py-2 rounded-4xl"
+              >
                 Enviar Consulta
-                <span className="bg-white w-6 h-6 flex items-center justify-center rounded-full ml-4"> <FcNext/> </span>
+                <span className="bg-white w-6 h-6 flex items-center justify-center rounded-full ml-4">
+                  {" "}
+                  <FcNext />{" "}
+                </span>
               </button>
-              
-
-        
-     
             </form>
           </div>
 
-            <div className=" w-72 p-6 bg-indigo-50 flex flex-col justify-center rounded-sm overflow-hidden clip-path-2">
-  
+          <div className=" w-72 p-6 bg-indigo-50 flex flex-col justify-center rounded-sm overflow-hidden clip-path-2">
             <h2 className="text-lg text-left font-black text-gray-800 relative inline-block border-b border-gray-400 pb-2 mb-2">
               ¡Aprende inglés de manera fácil y efectiva! ✨
             </h2>
