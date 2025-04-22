@@ -1,76 +1,15 @@
-import {
-  GraduationCap,
-  Globe2,
-  Menu,
-  Users,
-  MessageSquare,
-  BookOpen,
-  Trophy,
-} from "lucide-react";
+import { Globe2, Users, MessageSquare, BookOpen, Trophy } from "lucide-react";
 import Plans from "../../component/Plans/Plans";
 import Email from "../../component/Email/Email";
 import AboutSection from "../../component/Aboutsection/AboutSection";
-import { Link } from "react-router";
 import ClientesLogos from "../../component/ClientsLogos/ClientesLogos";
 import StudentReviews from "../../component/StudentReviews/StudentReviews";
 import Footer from "../../component/Footer/Footer";
-
+import Header from "../../component/Header/Header";
 function Home2() {
   return (
     <div className="min-h-screen bg-white">
-     
-      <header className="fixed w-full bg-white shadow-sm z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center">
-              <GraduationCap className="h-8 w-8 text-indigo-600" />
-              <span className="ml-2 text-xl font-bold text-gray-900">
-                GlobalEnglish
-              </span>
-            </div>
-
-            <nav className="hidden md:flex space-x-8">
-              <Link to="/"
-              
-                className="text-gray-700 hover:text-indigo-600 px-3 py-2 text-sm font-medium"
-              >
-                Inicio
-              </Link>
-              <Link to="/Home2"
-                href="#"
-                className="text-gray-700 hover:text-indigo-600 px-3 py-2 text-sm font-medium"
-              >
-                Metodología
-              </Link>
-              <Link
-                href="#"
-                className="text-gray-700 hover:text-indigo-600 px-3 py-2 text-sm font-medium"
-              >
-                Profesores
-              </Link>
-              <Link
-                href="#"
-                className="text-gray-700 hover:text-indigo-600 px-3 py-2 text-sm font-medium"
-              >
-                Precios
-              </Link>
-              <Link
-                href="#"
-                className="text-gray-700 hover:text-indigo-600 px-3 py-2 text-sm font-medium"
-              >
-                Contacto
-              </Link>
-            </nav>
-
-            <div className="md:hidden">
-              <button className="p-2 rounded-md text-gray-700 hover:text-indigo-600">
-                <Menu className="h-6 w-6" />
-              </button>
-            </div>
-          </div>
-        </div>
-      </header>
-
+      <Header />
       <main className="pt-16">
         <section className="py-20 bg-gradient-to-b from-indigo-50 to-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -159,10 +98,10 @@ function Home2() {
           </div>
         </section>
 
-        <ClientesLogos/>
+        <ClientesLogos />
 
         <AboutSection />
-       
+
         <Plans />
         <StudentReviews />
         <Email />
