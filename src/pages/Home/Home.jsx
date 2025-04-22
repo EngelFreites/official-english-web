@@ -6,6 +6,7 @@ import ClientesLogos from "../../component/ClientsLogos/ClientesLogos";
 import StudentReviews from "../../component/StudentReviews/StudentReviews";
 import Footer from "../../component/Footer/Footer";
 import Header from "../../component/Header/Header";
+import PricingPlans from "../../component/PricingPlans/PricingPlans";
 function Home2() {
   return (
     <div className="min-h-screen bg-white">
@@ -103,6 +104,7 @@ function Home2() {
         <AboutSection />
 
         <Plans />
+        <PricingPlans />
         <StudentReviews />
         <Email />
       </main>

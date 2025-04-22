@@ -1,6 +1,6 @@
 import Home from "./pages/Home/Home";
 import { Routes, Route } from "react-router";
-import Pricing from "./pages/Pricing/Pricing";
+
 function App() {
   return (
     <>
