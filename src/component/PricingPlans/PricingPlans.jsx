@@ -21,18 +21,19 @@ export default function PricingPlans() {
 
   return (
     <div className="flex relative flex-col items-center py-32 px-6 max-w-7xl mx-auto">
-      <div className="w-60 h-60 absolute blur-3xl left-16 top-40 rounded-full bg-indigo-200"></div>
-      <div className="w-40 h-40 absolute blur-3xl right-16 bottom-20 rounded-full bg-yellow-200"></div>
-      <div className="w-40 h-40 absolute blur-3xl bottom-14 left-96 rounded-full bg-green-200"></div>
-      <div className="w-40 h-40 absolute blur-3xl right-80 top-20 rounded-full bg-orange-200"></div>
-      <h1 className="text-4xl font-black text-gray-800 mb-2 z-9">
+      <div className="w-96 h-96 absolute blur-[120px] left-10 top-24 rounded-full bg-violet-200 opacity-80"></div>
+      <div className="w-72 h-72 absolute blur-[100px] right-10 top-56 rounded-full bg-blue-200 opacity-80"></div>
+      <div className="w-64 h-64 absolute blur-[100px] left-1/3 bottom-20 rounded-full bg-indigo-100 opacity-80"></div>
+      <div className="w-48 h-48 absolute blur-[80px] right-1/4 top-10 rounded-full bg-cyan-200 opacity-80"></div>
+
+      <h1 className="text-4xl font-black text-gray-800 mb-2 z-10">
         Simple, affordable plans
       </h1>
       <p className="text-lg text-gray-500 mb-16 z-10">
         Choose the plan that fits your needs
       </p>
 
-      <div className="flex flex-col md:flex-row justify-center items-center gap-8">
+      <div className="flex flex-col md:flex-row justify-center items-center gap-8 z-10">
         {data.map((item, index) => {
           const isPremium = item.attributes.title.toLowerCase() === "premium";
 
@@ -40,7 +41,7 @@ export default function PricingPlans() {
             return (
               <div
                 key={index}
-                className="relative flex flex-col  w-68 bg-indigo-50 border-2 border-indigo-500 rounded-3xl shadow-xl p-8 scale-105 transition-all hover:shadow-2xl hover:-translate-y-2 z-10"
+                className="relative flex flex-col w-68 bg-indigo-50 border-2 border-indigo-500 rounded-3xl shadow-xl p-8 scale-105 transition-all hover:shadow-2xl hover:-translate-y-2"
               >
                 <span className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-yellow-400 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
                   Most Popular
@@ -67,7 +68,7 @@ export default function PricingPlans() {
           return (
             <div
               key={index}
-              className="flex flex-col w-68  bg-white border border-indigo-200 rounded-3xl shadow-md z-9 p-6 transition-all hover:shadow-xl hover:-translate-y-1"
+              className="flex flex-col w-68 bg-white border border-indigo-200 rounded-3xl shadow-md p-6 transition-all hover:shadow-xl hover:-translate-y-1"
             >
               <p className="text-indigo-600 font-semibold mb-2">
                 {item.attributes.title}
