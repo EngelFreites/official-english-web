@@ -3,16 +3,33 @@
 @tailwind components;
 @tailwind utilities;
 
-
-.clip-path-1{
-  clip-path: polygon(30% 0%, 95% 0, 100% 14%, 100% 100%, 70% 100%, 0 100%, 0% 70%, 0 0)
+.clip-path-1 {
+  clip-path: polygon(
+    30% 0%,
+    95% 0,
+    100% 14%,
+    100% 100%,
+    70% 100%,
+    0 100%,
+    0% 70%,
+    0 0
+  );
 }
 
-.clip-path-2{
-  clip-path: polygon(30% 0%, 89% 0, 100% 14%, 100% 100%, 70% 100%, 0 100%, 0% 70%, 0 0)
-} 
+.clip-path-2 {
+  clip-path: polygon(
+    30% 0%,
+    89% 0,
+    100% 14%,
+    100% 100%,
+    70% 100%,
+    0 100%,
+    0% 70%,
+    0 0
+  );
+}
 
-.animate-scroll{
+.animate-scroll {
   view-timeline-name: --reveral;
   animation-name: scroll;
   animation-fill-mode: both;
@@ -21,14 +38,26 @@
 }
 
 @keyframes scroll {
-
-  from{
-    opacity: 0; 
+  from {
+    opacity: 0;
   }
 
   to {
-    opacity: 10; 
+    opacity: 10;
   }
-  
-  
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.4s ease-out forwards;
 }
