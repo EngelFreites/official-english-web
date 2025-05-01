@@ -1,5 +1,5 @@
 import emailjs from "@emailjs/browser";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { z } from "zod";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { FcNext } from "react-icons/fc";
@@ -19,6 +19,17 @@ export default function Email() {
     honeypot: "", 
   });
   const [errors, setErrors] = useState({});
+  const [sendEmail, setSendEmail] = useState(true);
+
+  useEffect(() => {
+    const navegatioEnd = window.performance.getEntriesByType("navigation");
+    if (navegatioEnd.length > 0 && navegatioEnd[0].type === "reload") {
+      setSendEmail(true); 
+
+    }
+
+
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -56,6 +67,7 @@ export default function Email() {
       message: "",
       honeypot: "", 
     });
+    setSendEmail(false); 
   };
 
   const handleChange = (e) => {
@@ -137,16 +149,30 @@ export default function Email() {
                   </div>
                 </div>
               </div>
-
-              <button
-                type="submit"
-                className="bg-indigo-700 text-sm text-white w-44 flex items-center justify-center py-2 rounded-4xl"
-              >
-                Enviar Consulta
-                <span className="bg-white w-6 h-6 flex items-center justify-center rounded-full ml-4">
-                  <FcNext />
-                </span>
-              </button>
+              
+              {
+                sendEmail
+                ?(    <button
+                  type="submit"
+                  className="bg-indigo-700 text-sm text-white w-44 flex items-center justify-center py-2 rounded-4xl"
+                >
+                  Enviar Consulta
+                  <span className="bg-white w-6 h-6 flex items-center justify-center rounded-full ml-4">
+                    <FcNext />
+                  </span>
+                </button>)
+                :(
+                  <div
+                  className="bg-gray-400 text-sm text-white w-44 flex items-center justify-center py-2 rounded-4xl"
+                >
+                  Enviar Consulta
+                  <span className="bg-white w-6 h-6 flex items-center justify-center rounded-full ml-4">
+                    <FcNext />
+                  </span>
+                </div>
+                )
+              }
+          
             </form>
           </div>
 
