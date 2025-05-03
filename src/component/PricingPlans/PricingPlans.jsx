@@ -1,48 +1,7 @@
-import { useState, useEffect } from "react";
 import { FourSquare } from "react-loading-indicators";
-import { db } from "../../lib/configFirebase";
-import { collection, getDocs } from "firebase/firestore";
-import { getAuth, signInWithEmailAndPassword, signOut } from "firebase/auth";
 
 export default function PricingPlans() {
-  const [documentos, setDocumentos] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const auth = getAuth();
-
-    const autoLogin = async () => {
-      try {
-        await signInWithEmailAndPassword(
-          auth,
-          import.meta.env.VITE_FIREBASE_EMAIL,
-          import.meta.env.VITE_FIREBASE_PASSWORD
-        );
-
-        const obtenerDatos = async () => {
-          const querySnapshot = await getDocs(collection(db, "plans"));
-          const listaDeDocumentos = querySnapshot.docs.map((doc) => ({
-            id: doc.id,
-            ...doc.data(),
-          }));
-          console.log("Documentos obtenidos:", listaDeDocumentos);
-          setDocumentos(listaDeDocumentos);
-          setLoading(false);
-
-          await signOut(auth);
-          console.log("Sesión cerrada");
-        };
-
-        obtenerDatos();
-      } catch (error) {
-        console.error("Error al iniciar sesión:", error);
-        setLoading(false);
-      }
-    };
-
-    autoLogin();
-  }, [db]);
-
+  const { documents, loading } = useFirebase();
   if (loading) {
     return (
       <div className="flex justify-center items-center h-screen">
@@ -66,7 +25,7 @@ export default function PricingPlans() {
       </p>
 
       <div className="flex flex-col md:flex-row justify-center items-center gap-8 z-10">
-        {documentos.map((item, index) => {
+        {documents.map((item, index) => {
           const isPremium = item.title.toLowerCase() === "premium";
 
           if (isPremium) {
