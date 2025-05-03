@@ -7,19 +7,17 @@ import { getAuth, signInWithEmailAndPassword, signOut } from "firebase/auth";
 export default function PricingPlans() {
   const [documentos, setDocumentos] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [user, setUser] = useState(null);
 
   useEffect(() => {
     const auth = getAuth();
 
     const autoLogin = async () => {
       try {
-        const userCredential = await signInWithEmailAndPassword(
+        await signInWithEmailAndPassword(
           auth,
           import.meta.env.VITE_FIREBASE_EMAIL,
           import.meta.env.VITE_FIREBASE_PASSWORD
         );
-        setUser(userCredential.user);
 
         const obtenerDatos = async () => {
           const querySnapshot = await getDocs(collection(db, "plans"));
@@ -33,7 +31,6 @@ export default function PricingPlans() {
 
           await signOut(auth);
           console.log("Sesión cerrada");
-          setUser(null);
         };
 
         obtenerDatos();
