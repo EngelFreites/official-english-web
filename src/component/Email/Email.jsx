@@ -84,26 +84,34 @@ export default function Email() {
       <div className="relative bg-white p-6 rounded-lg gap-2 flex rounded-tr-4xl clip-path-1">
         <div className="flex justify-between w-full md:flex-row gap-8 flex-col">
           <div className="flex flex-col">
-            <h2 className="text-2xl font-black text-gray-800 relative inline-block">
+            <h2 className="text-2xl font-black text-gray-800 relative inline-block mb-8">
               ¡Contáctanos y comienza
               <br />
               tu camino hoy! ✨
             </h2>
 
-            {sendedEmail ? (
-              <div className="flex flex-col items-center justify-center animate-fadeIn">
+            {isSending ? (
+              <div className="flex justify-center animate-fadeIn h-[200px]">
+                <DotLottieReact
+                  src="https://lottie.host/ab016612-5de1-43b0-b8c9-1caad5ca798d/MxDjgoak0u.lottie"
+                  loop
+                  autoplay
+                />
+              </div>
+            ) : sendedEmail ? (
+              <div className="flex flex-col items-center justify-center animate-fadeIn h-[200px]">
                 <DotLottieReact
                   src="https://lottie.host/7b3fa6c9-9457-4f6d-9623-1fea69ad0ac2/LOQd4PaLdS.lottie"
                   loop
                   autoplay
                 />
-                <p className="text-2xl font-bold text-center mt-4">
+                <p className="text-2xl font-bold text-center ">
                   ¡Consulta enviada! 📩
                 </p>
               </div>
             ) : (
               <form
-                className="flex flex-col gap-6 mt-8 h-full"
+                className="flex flex-col gap-6  h-[200px]"
                 onSubmit={handleSubmit}
               >
                 <input
@@ -198,18 +206,6 @@ export default function Email() {
           </div>
         </div>
       </div>
-      {isSending && (
-        <div className="fixed inset-0 bg-white/20 backdrop-blur-md flex items-center justify-center z-50">
-          <div className="p-12 bg-white bg-opacity-80 backdrop-blur-xl rounded-xl shadow-xl animate-fadeIn">
-            <DotLottieReact
-              src="https://lottie.host/ab016612-5de1-43b0-b8c9-1caad5ca798d/MxDjgoak0u.lottie"
-              loop
-              autoplay
-            />
-            <p className="text-2xl font-bold text-center">Enviando...</p>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
