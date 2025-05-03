@@ -1,4 +1,5 @@
 import { FourSquare } from "react-loading-indicators";
+import useFirebase from "../../hooks/useFirebase";
 
 export default function PricingPlans() {
   const { documents, loading } = useFirebase();
