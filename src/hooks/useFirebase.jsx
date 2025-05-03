@@ -31,7 +31,7 @@ export default function useFirebase() {
         };
 
         obtenerDatos();
-      } catch (error) {
+      } catch {
         setLoading(false);
       }
     };
