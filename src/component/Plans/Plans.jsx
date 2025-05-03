@@ -7,6 +7,7 @@ import {
   FcCalendar,
 } from "react-icons/fc";
 import { plans, plansList } from "../../data/plans.js";
+import Title from "../Title/Title.jsx";
 
 export default function Plans() {
   const [plan, setPlan] = useState("corporate");
@@ -20,10 +21,10 @@ export default function Plans() {
 
   return (
     <div className="flex flex-col py-32 px-6 max-w-7xl mx-auto" id="Plans">
-      <h1 className="text-4xl font-black text-gray-800 relative inline-block mb-2">
+      <Title margin={285}>
         Nuestros Planes
-        <span className="absolute left-0 bottom-1 w-80 h-2 bg-yellow-200 opacity-60 rounded-md"></span>
-      </h1>
+
+      </Title>
       <p className="text-lg text-gray-600">
         Te ofrecemos opciones diseñadas para cada necesidad y objetivo:
       </p>
@@ -35,10 +36,9 @@ export default function Plans() {
               onClick={() => setPlan(key)}
               className={`flex items-center gap-4 p-4 rounded-lg shadow-md  transition-all cursor-pointer ${
                 plan === key
-                  ? "border-2 border-blue-300 bg-blue-50"
+                  ? "border-1  border-indigo-400 bg-blue-50"
                   : "bg-white"
               }`}
-              href={`#${key}`}
             >
               <div
                 className={`p-2 ${backgroundColor} rounded-full flex items-center justify-center`}
