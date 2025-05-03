@@ -36,6 +36,21 @@
   animation-range: entry 25% cover 50%;
 }
 
+.animate-title{
+  animation: title 1s ease-in-out;
+}
+
+@keyframes title {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  
+}
 
 @keyframes scroll {
 
