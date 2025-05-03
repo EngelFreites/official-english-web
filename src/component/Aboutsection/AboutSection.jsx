@@ -1,103 +1,87 @@
-import { motion } from "framer-motion";
-import { FaChalkboardTeacher, FaUsers, FaBookOpen, FaGlobeAmericas } from "react-icons/fa";
-
 export default function AboutSection() {
   return (
-    <section className="flex  relative flex-col max-w-7xl mx-auto pt-24 gap-20  justify-center items-center text-gray-800 ">
-      <div className=" absolute top-8 w-96 h-96 rounded-full bg-blue-200 opacity-30 blur-2xl"></div>
-      <div className="flex flex-wrap gap-6">
-        {[
-          {
-            text: "Te ayudamos a integrar el idioma en tu vida de forma natural, ágil e intuitiva. Todo esto con entusiasmo y paciencia.",
-            icon: <FaGlobeAmericas className="text-blue-500 group-hover:rotate-12 transition-transform duration-300" />,
-          },
-          {
-            text: "Trabajamos con material actualizado y te guiamos para que puedas aprender dentro y fuera de la clase, logrando tus metas rápidamente.",
-            icon: <FaBookOpen className="text-green-500 group-hover:rotate-12 transition-transform duration-300" />,
-          },
-          {
-            text: "Ofrecemos clases dinámicas y adaptadas a cada estudiante, ajustando los contenidos y ritmos según tus necesidades.",
-            icon: <FaChalkboardTeacher className="text-red-500 group-hover:rotate-12 transition-transform duration-300" />,
-          },
-        ].map((item, index) => (
-          <motion.div
-            key={index}
-            className="animate-scroll bg-white flex p-6 gap-6  rounded-3xl shadow-lg hover:shadow-2xl hover:scale-105 transition-transform duration-300 ease-in-out group flex-1 min-w-[280px] max-w-[350px]"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 + index * 0.2 }}
-          >
-            <div className="text-4xl">{item.icon}</div>
-            <p className="text-lg text-gray-700">{item.text}</p>
-          </motion.div>
-        ))}
+    <div className=" relative flex flex-col xl:grid xl:grid-cols-5 xl:grid-rows-8 gap-6 max-w-6xl mx-auto p-4 sm:px-6 lg:px-8">
+      <div className=" relative col-span-2 row-span-4 bg-gradient-to-b bg-purple-400 rounded-4xl  h-72 xl:h-98 shadow-lg  px-4 pt-4 xl:px-10 xl:pt-10">
+        <h1 className="text-3xl font-bold text-[#FEF08A]">
+          Educación Hecha a Tu Medida
+        </h1>
+        <p className="text-xl text-[#FEF08A] mt-10 font-semibold">
+          Ofrecemos clases dinámicas y adaptadas a cada estudiante, ajustando
+          los contenidos y ritmos según tus necesidades.
+        </p>
+        <img
+          src="/englishLearn.png"
+          className="absolute bottom-4 w-30 h-30 right-4"
+          alt=""
+        />
+      </div>
+      <div className="relative bg-[#ff7e7e] xl:bg-transparent rounded-4xl xl:rounded-none  col-span-3 row-span-4 z-2 flex flex-col gap-8 items-center">
+        <img
+          src="/comentR.png"
+          className=" hidden xl:block xl:w-full xl:h-full absolute z-0"
+          alt=""
+        />
+        <h1 className="text-3xl font-bold text-[#282828] px-12 pt-12 relative z-10">
+          Aprende inglés de forma natural y a tu ritmo
+        </h1>
+        <p className="text-xl text-[#282828] px-12 pb-32 font-semibold relative z-10">
+          Te ayudamos a integrar el idioma en tu vida de forma natural, ágil e
+          intuitiva. Todo esto con entusiasmo y paciencia.
+        </p>
+        <img
+          className="absolute bottom-2 right-12 z-10 w-40 h-30 xl:w-50 xl:h-40"
+          src="/banderas.png"
+          alt=""
+        />
 
+        <div className="absolute hidden  bg-indigo-400 h-12 w-[280px] bottom-2 left-2 rounded-4xl  xl:flex items-center justify-center">
+          <p className="text-white text-sm">Aprende con naturalidad</p>
+        </div>
+      </div>
+      <div className=" xl:hidden  bg-indigo-400 h-12 w-full  rounded-4xl  flex items-center justify-center">
+        <p className="text-white text-sm">Aprende con naturalidad</p>
+      </div>
+      <div className="relative bg-[#7fe9fe] xl:bg-transparent rounded-4xl xl:rounded-none  col-span-3 row-span-4 z-2 flex flex-col gap-8 items-center">
+        <img
+          src="/comentL.png"
+          className="hidden xl:block xl:w-full xl:h-full absolute z-0"
+          alt=""
+        />
+        <h1 className=" relative text-3xl font-bold pt-12 px-12 text-gray-100 z-10">
+          Aprende con Material Actualizado y Alcanzá tus Metas Más Rápido
+        </h1>
+        <p className=" relative text-xl  text-gray-100 px-12 pb-32 font-semibold z-10">
+          Trabajamos con material actualizado y te guiamos para que puedas
+          aprender dentro y fuera de la clase, logrando tus metas rápidamente.
+        </p>
+        <img
+          className="absolute bottom-4 left-12 z-10 w-40 h-30 xl:w-50 xl:h-40"
+          src="/libros.png"
+          alt=""
+        />
+
+        <div className="absolute hidden  bg-indigo-400 h-12 w-[280px] bottom-1 right-0 rounded-4xl  xl:flex items-center justify-center">
+          <p className="text-white text-sm">Aprende con naturalidad</p>
+        </div>
+      </div>
+      <div className="xl:hidden  bg-indigo-400 h-12 w-full  rounded-4xl  flex items-center justify-center">
+        <p className="text-white text-sm">Aprende con naturalidad</p> 
       </div>
 
-      
-        <section className=" relative max-w-7xl mx-auto py-16 px-6 md:px-16">
-      
-      
-        <div className="absolute top-20 right-0 w-40 h-40 bg-blue-200 rounded-full z-[-1]"></div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-      
-          <motion.div
-            className=" animate-scroll flex flex-col  border-1 border-indigo-300 items-center p-8 rounded-lg shadow-md transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-105"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            whileHover={{ scale: 1.05 }}
-          >
-            <div className="bg-indigo-100 p-4 rounded-full mb-4">
-              <FaChalkboardTeacher className="text-indigo-600 text-4xl" />
-            </div>
-            <h3 className="text-lg font-semibold text-gray-800 text-center">Profesores Certificados</h3>
-            <p className="text-gray-600 text-center mt-2">Aprende con profesionales cualificados.</p>
-          </motion.div>
-
-          <motion.div
-            className=" animate-scroll flex flex-col items-center border-1  border-indigo-300 p-8 rounded-lg shadow-md transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-105"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            whileHover={{ scale: 1.05 }}
-          >
-            <div className="bg-pink-100 p-4 rounded-full mb-4">
-              <FaBookOpen className="text-pink-600 text-4xl" />
-            </div>
-            <h3 className="text-lg font-semibold text-gray-800 text-center">Material Actualizado</h3>
-            <p className="text-gray-600 text-center mt-2">Acceso a recursos de aprendizaje modernos y relevantes.</p>
-          </motion.div>
-
-          <motion.div
-            className=" animate-scroll flex flex-col items-center border-1  border-indigo-300 p-8 rounded-lg shadow-md transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-105"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            whileHover={{ scale: 1.05 }}
-          >
-            <div className="bg-green-100 p-4 rounded-full mb-4">
-              <FaUsers className="text-green-600 text-4xl" />
-            </div>
-            <h3 className="text-lg font-semibold text-gray-800 text-center">Coaches Expertos</h3>
-            <p className="text-gray-600 text-center mt-2">Recibe guía y apoyo de coaches experimentados.</p>
-          </motion.div>
-
-          <motion.div
-            className=" animate-scroll flex flex-col items-center border-1 border-indigo-300 p-8 rounded-lg shadow-md transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-105"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            whileHover={{ scale: 1.05 }}
-          >
-            <div className="bg-yellow-100 p-4 rounded-full mb-4">
-              <FaGlobeAmericas className="text-yellow-600 text-4xl" />
-            </div>
-            <h3 className="text-lg font-semibold text-gray-800 text-center">Inmersión Cultural</h3>
-            <p className="text-gray-600 text-center mt-2">Sumérgete en la cultura para un aprendizaje más profundo.</p>
-          </motion.div>
-        </div>
-      </section>                 
-    </section>
+      <div className=" relative col-span-2 row-span-4  bg-pink-100 rounded-4xl  h-72 xl:h-98 shadow-lg  px-4 pt-4 xl:px-10 xl:pt-10">
+        <h1 className="text-3xl font-bold text-[#C27AFF]">
+          Educación Hecha a Tu Medida
+        </h1>
+        <p className="text-xl text-[#C27AFF] mt-10 font-semibold">
+          Ofrecemos clases dinámicas y adaptadas a cada estudiante, ajustando
+          los contenidos y ritmos según tus necesidades.
+        </p>
+        <img
+          className="absolute bottom-4 w-40 h-30 right-4"
+          src="/learnEnglish.png"
+          alt=""
+        />
+      </div>
+    </div>
   );
 }
