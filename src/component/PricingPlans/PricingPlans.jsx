@@ -6,16 +6,14 @@ import { getAuth, signInWithEmailAndPassword, signOut } from "firebase/auth";
 
 export default function PricingPlans() {
   const [documentos, setDocumentos] = useState([]);
-  const [loading, setLoading] = useState(true); // Estado para manejar el loading
-  const [user, setUser] = useState(null); // Estado para manejar la sesión del usuario
+  const [loading, setLoading] = useState(true);
+  const [user, setUser] = useState(null);
 
   useEffect(() => {
     const auth = getAuth();
 
-    // Iniciar sesión automáticamente con las credenciales predefinidas
     const autoLogin = async () => {
       try {
-        // Inicia sesión con las credenciales predefinidas
         const userCredential = await signInWithEmailAndPassword(
           auth,
           import.meta.env.VITE_FIREBASE_EMAIL,
@@ -23,7 +21,6 @@ export default function PricingPlans() {
         );
         setUser(userCredential.user);
 
-        // Obtener los documentos de Firestore
         const obtenerDatos = async () => {
           const querySnapshot = await getDocs(collection(db, "plans"));
           const listaDeDocumentos = querySnapshot.docs.map((doc) => ({
@@ -32,25 +29,23 @@ export default function PricingPlans() {
           }));
           console.log("Documentos obtenidos:", listaDeDocumentos);
           setDocumentos(listaDeDocumentos);
-          setLoading(false); // Cambiar el estado de carga una vez que los datos estén disponibles
+          setLoading(false);
 
-          // Cerrar sesión después de obtener los datos
           await signOut(auth);
           console.log("Sesión cerrada");
-          setUser(null); // Actualizar el estado para reflejar que el usuario ya no está autenticado
+          setUser(null);
         };
 
         obtenerDatos();
       } catch (error) {
         console.error("Error al iniciar sesión:", error);
-        setLoading(false); // Si hay un error, terminamos el loading
+        setLoading(false);
       }
     };
 
-    autoLogin(); // Llamar a la función para hacer el login automáticamente
+    autoLogin();
   }, [db]);
 
-  // Mostrar el indicador de carga si los documentos aún no están cargados
   if (loading) {
     return (
       <div className="flex justify-center items-center h-screen">
