@@ -1,5 +1,6 @@
 import Home from "./pages/Home/Home";
 import { Routes, Route } from "react-router";
+
 function App() {
   return (
     <>
