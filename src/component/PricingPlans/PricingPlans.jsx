@@ -45,7 +45,7 @@ export default function PricingPlans() {
                   {item.price}
                 </h2>
                 <p className="text-gray-600 mb-4">{item.billing_period}</p>
-                <button className="px-6 py-2 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition-colors mb-6 shadow-lg">
+                <button className="px-6 py-2 bg-indigo-600 text-white font-semibold cursor-pointer rounded-lg hover:bg-indigo-700 transition-colors mb-6 shadow-lg">
                   Start free trial
                 </button>
                 <p className="whitespace-pre-line leading-relaxed">
@@ -65,7 +65,7 @@ export default function PricingPlans() {
                 {item.price}
               </h2>
               <p className="text-gray-400 mb-4">{item.billing_period}</p>
-              <button className="px-6 py-2 bg-indigo-50 text-indigo-700 font-semibold rounded-lg border border-indigo-500 hover:bg-indigo-100 transition-colors mb-6">
+              <button className="px-6 py-2 bg-indigo-50 text-indigo-700 cursor-pointer font-semibold rounded-lg border border-indigo-500 hover:bg-indigo-100 transition-colors mb-6">
                 Start free trial
               </button>
               <p className="whitespace-pre-line leading-relaxed ">
