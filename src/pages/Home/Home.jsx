@@ -6,7 +6,7 @@ import { Link } from "react-router";
 import ClientesLogos from "../../component/ClientsLogos/ClientesLogos";
 import StudentReviews from "../../component/StudentReviews/StudentReviews";
 import Footer from "../../component/Footer/Footer";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import TypewriterParagraph from "../../component/TypewriterParagraph/TypewriterParagraph";
 import HeroFeatureSection from "../../component/HeroFeatureSection/HeroFeatureSection";
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
