@@ -7,6 +7,7 @@ import {
   FcCalendar,
 } from "react-icons/fc";
 import { plans, plansList } from "../../data/plans.js";
+import Title from "../Title/Title.jsx";
 
 export default function Plans() {
   const [plan, setPlan] = useState("corporate");
@@ -20,10 +21,10 @@ export default function Plans() {
 
   return (
     <div className="flex flex-col py-32 px-6 max-w-7xl mx-auto" id="Plans">
-      <h1 className="text-4xl font-black text-gray-800 relative inline-block mb-2">
+      <Title margin={285}>
         Nuestros Planes
-        <span className="absolute left-0 bottom-1 w-80 h-2 bg-yellow-200 opacity-60 rounded-md"></span>
-      </h1>
+
+      </Title>
       <p className="text-lg text-gray-600">
         Te ofrecemos opciones diseñadas para cada necesidad y objetivo:
       </p>
