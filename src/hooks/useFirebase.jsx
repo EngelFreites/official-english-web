@@ -24,17 +24,14 @@ export default function useFirebase() {
             id: doc.id,
             ...doc.data(),
           }));
-          console.log("Documentos obtenidos:", listaDeDocumentos);
           setDocuments(listaDeDocumentos);
           setLoading(false);
 
           await signOut(auth);
-          console.log("Sesión cerrada");
         };
 
         obtenerDatos();
-      } catch (error) {
-        console.error("Error al iniciar sesión:", error);
+      } catch () {
         setLoading(false);
       }
     };
