@@ -173,7 +173,7 @@ export default function Email() {
                 </div>
                 <button
                   type="submit"
-                  className="bg-indigo-700 text-sm text-white w-44 flex items-center justify-center py-2 rounded-4xl"
+                  className="bg-indigo-700 text-sm text-white w-44 flex items-center justify-center cursor-pointer py-2 rounded-4xl"
                 >
                   Enviar Consulta
                   <span className="bg-white w-6 h-6 flex items-center justify-center rounded-full ml-4">
