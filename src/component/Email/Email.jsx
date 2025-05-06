@@ -4,7 +4,6 @@ import { z } from "zod";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { FcNext } from "react-icons/fc";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
-import { div } from "framer-motion/client";
 
 const formSchema = z.object({
   name: z.string().min(1, "El nombre es obligatorio"),
