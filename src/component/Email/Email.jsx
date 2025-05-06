@@ -93,6 +93,7 @@ export default function Email() {
             {isSending ? (
               <div className="flex justify-center animate-fadeIn h-[200px]">
                 <DotLottieReact
+                  className=" pl-16 pb-16"
                   src="https://lottie.host/ab016612-5de1-43b0-b8c9-1caad5ca798d/MxDjgoak0u.lottie"
                   loop
                   autoplay
