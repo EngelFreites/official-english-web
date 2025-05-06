@@ -8,6 +8,7 @@ import {
 } from "react-icons/fc";
 import { plans, plansList } from "../../data/plans.js";
 import Title from "../Title/Title.jsx";
+import PlansResponsive from "../Plans-responsive/Plans-responsive.jsx";
 
 export default function Plans() {
   const [plan, setPlan] = useState("corporate");
@@ -21,14 +22,12 @@ export default function Plans() {
 
   return (
     <div className="flex flex-col py-32 px-6 max-w-7xl mx-auto" id="Plans">
-      <Title margin={285}>
-        Nuestros Planes
-
-      </Title>
+      <Title margin={285}>Nuestros Planes</Title>
       <p className="text-lg text-gray-600">
         Te ofrecemos opciones diseñadas para cada necesidad y objetivo:
       </p>
-      <div className="flex flex-col lg:flex-row gap-16 mt-8">
+      <PlansResponsive />
+      <div className="lg:flex lg:flex-row hidden  gap-16 mt-8">
         <div className="flex flex-col gap-6 w-full">
           {plansList.map(([key, { icon, title, text, backgroundColor }]) => (
             <a
