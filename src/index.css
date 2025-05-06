@@ -29,12 +29,69 @@
   );
 }
 
+* {
+  box-sizing: border-box;
+}
+
+.logo-slide-track {
+  animation: slide 30s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.clip-path-1 {
+  clip-path: polygon(
+    30% 0%,
+    95% 0,
+    100% 14%,
+    100% 100%,
+    70% 100%,
+    0 100%,
+    0% 70%,
+    0 0
+  );
+}
+
+.clip-path-2 {
+  clip-path: polygon(
+    30% 0%,
+    89% 0,
+    100% 14%,
+    100% 100%,
+    70% 100%,
+    0 100%,
+    0% 70%,
+    0 0
+  );
+}
+
 .animate-scroll {
   view-timeline-name: --reveral;
   animation-name: scroll;
   animation-fill-mode: both;
   animation-timeline: --reveral;
   animation-range: entry 25% cover 50%;
+}
+
+.animate-title {
+  animation: title 1s ease-in-out;
+}
+
+@keyframes title {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
 }
 
 @keyframes scroll {
