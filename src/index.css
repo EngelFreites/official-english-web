@@ -3,32 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.clip-path-1 {
-  clip-path: polygon(
-    30% 0%,
-    95% 0,
-    100% 14%,
-    100% 100%,
-    70% 100%,
-    0 100%,
-    0% 70%,
-    0 0
-  );
-}
-
-.clip-path-2 {
-  clip-path: polygon(
-    30% 0%,
-    89% 0,
-    100% 14%,
-    100% 100%,
-    70% 100%,
-    0 100%,
-    0% 70%,
-    0 0
-  );
-}
-
 * {
   box-sizing: border-box;
 }
@@ -100,21 +74,20 @@
   }
 
   to {
-    opacity: 10;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
     opacity: 1;
-    transform: scale(1);
   }
 }
 
-.animate-fadeIn {
-  animation: fadeIn 0.4s ease-out forwards;
+@layer components {
+  .logo-slider {
+    @apply relative overflow-hidden before:absolute before:left-0 before:top-0 before:z-10 before:w-[50px] before:h-full before:bg-gradient-to-r before:from-white before:to-transparent after:absolute after:right-0 after:top-0 after:z-10 after:w-[50px] after:h-full after:bg-gradient-to-l after:from-white after:to-transparent;
+  }
+
+  .logo-slide-track {
+    @apply flex items-center; /* Remove animate-slide */
+  }
+
+  .logo-slide {
+    @apply min-w-[150px];
+  }
 }
