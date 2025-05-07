@@ -79,7 +79,10 @@ export default function Email() {
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-4 mb-8 bg-gradient-to-r from-indigo-400 to-purple-600 rounded-lg relative z-0">
+    <section
+      id="contact"
+      className="max-w-4xl mx-auto p-4 mb-8 bg-gradient-to-r from-indigo-400 to-purple-600 rounded-lg relative z-0"
+    >
       <div className="relative bg-white p-6 rounded-lg gap-2 flex rounded-tr-4xl clip-path-1">
         <div className="flex justify-between w-full md:flex-row gap-8 flex-col">
           <div className="flex flex-col">
@@ -206,6 +209,6 @@ export default function Email() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

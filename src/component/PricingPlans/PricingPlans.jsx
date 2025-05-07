@@ -12,7 +12,10 @@ export default function PricingPlans() {
   }
 
   return (
-    <div className="flex relative flex-col items-center pb-32 px-6 max-w-7xl mx-auto">
+    <section
+      id="PricingPlans"
+      className="flex relative flex-col items-center pb-32 px-6 max-w-7xl mx-auto"
+    >
       <div className="w-96 h-96 absolute blur-[120px] left-10 top-24 rounded-full bg-violet-200 opacity-80"></div>
       <div className="w-72 h-72 absolute blur-[100px] right-10 top-56 rounded-full bg-blue-200 opacity-80"></div>
       <div className="w-64 h-64 absolute blur-[100px] left-1/3 bottom-20 rounded-full bg-indigo-100 opacity-80"></div>
@@ -75,6 +78,6 @@ export default function PricingPlans() {
           );
         })}
       </div>
-    </div>
+    </section>
   );
 }
