@@ -1,6 +1,9 @@
 export default function AboutSection() {
   return (
-    <div className=" relative flex flex-col xl:grid xl:grid-cols-5 xl:grid-rows-8 gap-6 max-w-6xl mx-auto p-4 sm:px-6 lg:px-8">
+    <section
+      id="about"
+      className=" relative flex flex-col xl:grid xl:grid-cols-5 xl:grid-rows-8 gap-6 max-w-6xl mx-auto p-4 sm:px-6 lg:px-8"
+    >
       <div className=" relative col-span-2 row-span-4 bg-gradient-to-b bg-purple-400 rounded-4xl  h-72 xl:h-98 shadow-lg  px-4 pt-4 xl:px-10 xl:pt-10">
         <h1 className="text-3xl font-bold text-[#FEF08A]">
           Educación Hecha a Tu Medida
@@ -65,7 +68,7 @@ export default function AboutSection() {
         </div>
       </div>
       <div className="xl:hidden  bg-indigo-400 h-12 w-full  rounded-4xl  flex items-center justify-center">
-        <p className="text-white text-sm">Aprende con naturalidad</p> 
+        <p className="text-white text-sm">Aprende con naturalidad</p>
       </div>
 
       <div className=" relative col-span-2 row-span-4  bg-pink-100 rounded-4xl  h-72 xl:h-98 shadow-lg  px-4 pt-4 xl:px-10 xl:pt-10">
@@ -82,6 +85,6 @@ export default function AboutSection() {
           alt=""
         />
       </div>
-    </div>
+    </section>
   );
 }
