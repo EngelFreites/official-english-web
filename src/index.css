@@ -8,7 +8,8 @@
 }
 
 .logo-slide-track {
-  animation: slide 30s linear infinite;
+  animation: slide 50s linear infinite;
+  width: 3276px;
 }
 
 @keyframes slide {
@@ -16,7 +17,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-1638px);
   }
 }
 .clip-path-1 {
@@ -80,7 +81,7 @@
 
 @layer components {
   .logo-slider {
-    @apply relative overflow-hidden before:absolute before:left-0 before:top-0 before:z-10 before:w-[50px] before:h-full before:bg-gradient-to-r before:from-white before:to-transparent after:absolute after:right-0 after:top-0 after:z-10 after:w-[50px] after:h-full after:bg-gradient-to-l after:from-white after:to-transparent;
+    @apply relative overflow-hidden before:absolute before:left-0 before:top-0 before:z-10 before:w-[56px] before:h-full before:bg-gradient-to-r before:from-white before:to-transparent after:absolute after:right-0 after:top-0 after:z-10 after:w-[56px] after:h-full after:bg-gradient-to-l after:from-white after:to-transparent;
   }
 
   .logo-slide-track {
@@ -88,6 +89,6 @@
   }
 
   .logo-slide {
-    @apply min-w-[150px];
+    @apply w-[150px] min-w-[150px] mx-4;
   }
 }

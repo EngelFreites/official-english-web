@@ -1,29 +1,41 @@
-import React from 'react';
+import React from "react";
 
 const logos = [
   {
-    name: 'Company 1',
-    url: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=200&h=80&fit=crop&q=80',
+    name: "Company 2",
+    url: "/CLAVECREDITOS.jpeg",
   },
   {
-    name: 'Company 2',
-    url: 'https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=200&h=80&fit=crop&q=80',
+    name: "Company 3",
+    url: "/EPIDATA.png",
   },
   {
-    name: 'Company 3',
-    url: 'https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?w=200&h=80&fit=crop&q=80',
+    name: "Company 4",
+    url: "/FLEXIBILITY.png",
   },
   {
-    name: 'Company 4',
-    url: 'https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=200&h=80&fit=crop&q=80',
+    name: "Company 5",
+    url: "/KULKAN.png",
   },
   {
-    name: 'Company 5',
-    url: 'https://images.unsplash.com/photo-1611162617263-4ec3060a058e?w=200&h=80&fit=crop&q=80',
+    name: "Company 6",
+    url: "/Pharmware.png",
   },
   {
-    name: 'Company 6',
-    url: 'https://images.unsplash.com/photo-1611162616677-5497d88c79f0?w=200&h=80&fit=crop&q=80',
+    name: "Company 7",
+    url: "/Simplestate.png",
+  },
+  {
+    name: "Company 8",
+    url: "/Staffrock.png",
+  },
+  {
+    name: "Company 9",
+    url: "/Talently.jpeg",
+  },
+  {
+    name: "Company 10",
+    url: "/MURAL.svg",
   },
 ];
 const ClientesLogos = () => {
@@ -39,12 +51,16 @@ const ClientesLogos = () => {
               {[...logos, ...logos].map((logo, index) => (
                 <div
                   key={index}
-                  className="logo-slide flex items-center justify-center mx-4"
+                  className={`logo-slide flex items-center justify-center mx-4 `}
                 >
                   <img
                     src={logo.url}
                     alt={logo.name}
-                    className="h-8 object-contain mix-blend-luminosity hover:mix-blend-normal transition-all duration-300"
+                    className={`h-14 object-contain mix-blend-luminosity hover:mix-blend-normal transition-all duration-300 ${
+                      logo.name == "Company 6" || logo.name == "Company 8"
+                        ? "drop-shadow-[0_0_2px_black]"
+                        : ""
+                    }`}
                   />
                 </div>
               ))}
