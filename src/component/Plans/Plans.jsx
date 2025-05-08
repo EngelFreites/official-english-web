@@ -30,26 +30,32 @@ export default function Plans() {
       <div className="lg:flex lg:flex-row hidden  gap-16 mt-8">
         <div className="flex flex-col gap-6 w-full">
           {plansList.map(([key, { icon, title, text, backgroundColor }]) => (
-            <button
+            <div
               key={key}
-              onClick={() => setPlan(key)}
-              className={`flex items-center gap-4 p-4 rounded-lg shadow-md  transition-all cursor-pointer ${
-                plan === key
-                  ? "border-1  border-indigo-400 bg-blue-50"
-                  : "bg-white"
-              }`}
+              className={`${
+                plan === key ? " bg-indigo-400" : "bg-white"
+              } rounded-lg p-[2px]`}
             >
-              <div
-                className={`p-2 ${backgroundColor} rounded-full flex items-center justify-center`}
+              <button
+                onClick={() => setPlan(key)}
+                className={`flex items-center gap-4 p-4 rounded-lg shadow-md cursor-pointer active:scale-99 transition transform ${
+                  plan === key ? "bg-blue-50" : "bg-white"
+                }`}
               >
-                {iconPlans[icon]}
-              </div>
-              <div className="flex-1 text-left">
-                <h2 className="text-lg font-semibold text-gray-800">{title}</h2>
-                <p className="text-sm text-gray-600">{text}</p>
-              </div>
-              <FcNext size={40} />
-            </button>
+                <div
+                  className={`p-2 ${backgroundColor} rounded-full flex items-center justify-center`}
+                >
+                  {iconPlans[icon]}
+                </div>
+                <div className="flex-1 text-left">
+                  <h2 className="text-lg font-semibold text-gray-800">
+                    {title}
+                  </h2>
+                  <p className="text-sm text-gray-600">{text}</p>
+                </div>
+                <FcNext size={40} />
+              </button>
+            </div>
           ))}
         </div>
         <div className="flex flex-col items-center text-center max-w-full relative">
