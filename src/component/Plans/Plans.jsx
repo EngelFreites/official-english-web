@@ -58,11 +58,11 @@ export default function Plans() {
             </div>
           ))}
         </div>
-        <div className="flex flex-col items-center text-center max-w-full relative">
+        <div className="flex flex-col items-center text-center  max-w-full relative h-[550px]">
           {plans.map(
             ([key, { title, text }]) =>
               plan === key && (
-                <div className="text-left px-8 max-w-7xl" key={title}>
+                <div className="text-left px-8 max-w-7xl " key={title}>
                   <h2 className="text-2xl font-bold text-gray-800 mb-4 whitespace-pre-line text-center">
                     {title}
                   </h2>
