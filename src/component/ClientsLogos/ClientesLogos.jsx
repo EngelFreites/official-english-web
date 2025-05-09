@@ -1,9 +1,7 @@
 import React from "react";
 
-const logos =
-    name: "Company 2",
-    url: "/CLAVECREDITOS.jpeg",
-  },
+const logos = [
+  { name: "Company 2", url: "/CLAVECREDITOS.jpeg" },
   {
     name: "Company 3",
     url: "/EPIDATA.png",
@@ -35,7 +33,6 @@ const logos =
   {
     name: "Company 10",
     url: "/MURAL.svg",
-
   },
 ];
 const ClientesLogos = () => {
