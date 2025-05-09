@@ -8,10 +8,7 @@ export default function WhatsappButton() {
       rel="noopener noreferrer"
       className="fixed bottom-16 right-16 z-999"
     >
-      <FaWhatsapp
-        className="h-18 w-18 text-white stroke-black stroke-[] "
-        color="green"
-      />
+      <FaWhatsapp className="h-18 w-18 " color="green" />
     </a>
   );
 }
