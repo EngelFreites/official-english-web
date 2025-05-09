@@ -12,6 +12,7 @@ import { useEffect } from "react";
 import TypewriterParagraph from "../../component/TypewriterParagraph/TypewriterParagraph";
 import HeroFeatureSection from "../../component/HeroFeatureSection/HeroFeatureSection";
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
+import WhatsappButton from "../../component/WhatsappButton/WhatsappButton";
 
 function Home() {
   const count = useMotionValue(0);
@@ -83,6 +84,7 @@ function Home() {
         <PricingPlans />
         <StudentReviews />
         <Email />
+        <WhatsappButton />
       </main>
       <Footer />
     </div>
