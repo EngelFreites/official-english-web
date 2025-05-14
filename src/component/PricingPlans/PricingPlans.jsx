@@ -36,7 +36,7 @@ export default function PricingPlans() {
             return (
               <div
                 key={index}
-                className="relative flex flex-col w-68 bg-indigo-50 border-2 border-indigo-500 rounded-3xl shadow-xl p-8 scale-105 transition-all hover:shadow-2xl hover:-translate-y-2"
+                className="relative flex flex-col w-68 bg-indigo-50 border-2 border-indigo-500 rounded-3xl shadow-xl p-8 scale-105 transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2"
               >
                 <span className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-yellow-400 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
                   Most Popular
@@ -61,7 +61,7 @@ export default function PricingPlans() {
           return (
             <div
               key={index}
-              className="flex flex-col w-68 bg-white border border-indigo-200 rounded-3xl shadow-md p-6 transition-all hover:shadow-xl hover:-translate-y-1"
+              className="flex flex-col w-68 bg-white border border-indigo-200 rounded-3xl shadow-md p-6 transition-all hover:shadow-xl hover:-translate-y-1  duration-300 ease-in-out "
             >
               <p className="text-indigo-600 font-semibold mb-2">{item.title}</p>
               <h2 className="text-3xl font-extrabold text-gray-800 mb-1">
