@@ -2,7 +2,7 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className=" relative flex flex-col xl:grid xl:grid-cols-5 xl:grid-rows-8 gap-6 max-w-6xl mx-auto p-4 sm:px-6 lg:px-8"
+      className=" relative flex flex-col xl:grid xl:grid-cols-5 pt-42 xl:grid-rows-8 gap-6 max-w-6xl mx-auto p-4 sm:px-6 lg:px-8"
     >
       <div className=" relative col-span-2 row-span-4 bg-gradient-to-b bg-purple-400 rounded-4xl  h-72 xl:h-98 shadow-lg  px-4 pt-4 xl:px-10 xl:pt-10">
         <h1 className="text-3xl font-bold text-[#FEF08A]">
