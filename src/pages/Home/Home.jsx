@@ -28,7 +28,7 @@ function Home() {
       <Header />
       <main className="pt-16">
         <section
-          className="py-20 bg-gradient-to-b from-indigo-50 to-white"
+          className=" pt-20 bg-gradient-to-b from-indigo-50 to-white"
           id="inicio"
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

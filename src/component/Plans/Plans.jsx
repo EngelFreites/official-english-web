@@ -21,7 +21,7 @@ export default function Plans() {
   };
 
   return (
-    <section id="Plans" className="flex flex-col py-32 px-6 max-w-7xl mx-auto">
+    <section id="Plans" className="flex flex-col pt-42 px-6 max-w-7xl mx-auto">
       <Title margin={285}>Nuestros Planes</Title>
       <p className="text-lg text-gray-600">
         Te ofrecemos opciones diseñadas para cada necesidad y objetivo:

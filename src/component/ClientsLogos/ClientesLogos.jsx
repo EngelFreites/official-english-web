@@ -37,7 +37,7 @@ const logos = [
 ];
 const ClientesLogos = () => {
   return (
-    <section className="bg-white py-16" id="clientes">
+    <section className="bg-white pt-42" id="clientes">
       <div className="max-w-4xl mx-auto flex flex-col justify-center gap-16 px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl text-center font-black text-gray-800 relative inline-block mb-2">
           Empresas que confían en nosotros
