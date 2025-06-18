@@ -39,11 +39,7 @@ export default function PlansResponsive() {
                 className={`
                 flex items-center gap-4 p-4 rounded-lg shadow-md w-full
                 transition-all cursor-pointer duration-700 transform
-                ${
-                  plan === key
-                    ? "border-1 border-indigo-400 bg-blue-50"
-                    : "bg-white"
-                }
+                ${plan === key ? "border-shadow bg-blue-50" : "bg-white"}
                 ${
                   visibleItems.includes(index.toString())
                     ? "opacity-100 translate-y-0"
