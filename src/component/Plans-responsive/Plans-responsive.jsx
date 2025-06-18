@@ -73,7 +73,7 @@ export default function PlansResponsive() {
                     : "max-h-0 opacity-0"
                 }`}
               >
-                <div className="flex flex-col items-center text-center max-w-full relative">
+                <div className="flex flex-col items-center text-center max-w-full relative p-4">
                   <div className="text-left px-8 max-w-7xl">
                     <h2 className="text-2xl font-bold text-gray-800 mb-4 whitespace-pre-line text-center">
                       {plans[index][1].title}
