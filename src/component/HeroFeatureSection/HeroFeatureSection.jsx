@@ -5,7 +5,7 @@ export default function HeroFeatureSection() {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setShow(true), 100); 
+    const timer = setTimeout(() => setShow(true), 100);
     return () => clearTimeout(timer);
   }, []);
 
@@ -40,7 +40,7 @@ export default function HeroFeatureSection() {
       </div>
 
       <div
-        className={`absolute -right-8 bottom-12 bg-white rounded-lg shadow-xl p-4 w-64 transform transition-all duration-1000 ${
+        className={`absolute md:-right-8 -right-4 bottom-12 bg-white rounded-lg shadow-xl p-4 w-64 transform transition-all duration-1000 ${
           show ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"
         }`}
       >
