@@ -28,7 +28,7 @@ export default function PricingPlans() {
         Choose the plan that fits your needs
       </p>
 
-      <div className="flex flex-col md:flex-row justify-center items-center gap-8 z-10">
+      <div className="flex flex-col lg:flex-row justify-center items-center gap-8 z-10">
         {documents.map((item, index) => {
           const isPremium = item.title.toLowerCase() === "premium";
 
