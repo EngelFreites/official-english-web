@@ -24,7 +24,7 @@ export default function HeroFeatureSection() {
       </div>
 
       <div
-        className={`absolute -left-8 top-1/2 bg-white rounded-lg shadow-xl p-4 w-64 transform transition-all duration-1000 ${
+        className={`absolute -left-4 top-1/2 bg-white rounded-lg shadow-xl p-4 w-64 transform transition-all duration-1000 ${
           show ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"
         }`}
       >
@@ -40,7 +40,7 @@ export default function HeroFeatureSection() {
       </div>
 
       <div
-        className={`absolute md:-right-8 -right-4 bottom-12 bg-white rounded-lg shadow-xl p-4 w-64 transform transition-all duration-1000 ${
+        className={`absolute -right-4 bottom-12 bg-white rounded-lg shadow-xl p-4 w-64 transform transition-all duration-1000 ${
           show ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"
         }`}
       >
