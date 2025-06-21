@@ -2,9 +2,9 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className=" relative flex flex-col xl:grid xl:grid-cols-5 xl:grid-rows-8 gap-6 max-w-6xl mx-auto p-4 sm:px-6 lg:px-8"
+      className=" relative flex flex-col lg:grid lg:grid-cols-5 xl:grid-rows-8 gap-6 max-w-6xl mx-auto p-4 sm:px-6 lg:px-8"
     >
-      <div className=" relative col-span-2 row-span-4 bg-gradient-to-b bg-purple-400 rounded-4xl  h-72 xl:h-98 shadow-lg  px-4 pt-4 xl:px-10 xl:pt-10">
+      <div className=" relative col-span-2 row-span-4 bg-gradient-to-b bg-purple-400 rounded-4xl  h-72 lg:h-98 shadow-lg  px-4 pt-4 lg:px-10 lg:pt-10">
         <h1 className="text-3xl font-bold text-[#FEF08A]">
           Educación Hecha a Tu Medida
         </h1>
@@ -18,10 +18,10 @@ export default function AboutSection() {
           alt=""
         />
       </div>
-      <div className="relative bg-[#ff7e7e] xl:bg-transparent rounded-4xl xl:rounded-none  col-span-3 row-span-4 z-2 flex flex-col gap-8 items-center">
+      <div className="relative bg-[#ff7e7e] lg:bg-transparent rounded-4xl lg:rounded-none  col-span-3 row-span-4 z-2 flex flex-col gap-8 items-center">
         <img
           src="/comentR.png"
-          className=" hidden xl:block xl:w-full xl:h-full absolute z-0"
+          className=" hidden lg:block lg:w-full lg:h-full absolute z-0"
           alt=""
         />
         <h1 className="text-3xl font-bold text-[#282828] px-12 pt-12 relative z-10">
@@ -32,22 +32,22 @@ export default function AboutSection() {
           intuitiva. Todo esto con entusiasmo y paciencia.
         </p>
         <img
-          className="absolute bottom-2 right-12 z-10 w-40 h-30 xl:w-50 xl:h-40"
+          className="absolute bottom-2 right-12 z-10 w-40 h-30 lg:w-50 lg:h-40"
           src="/banderas.png"
           alt=""
         />
 
-        <div className="absolute hidden  bg-indigo-400 h-12 w-[280px] bottom-2 left-2 rounded-4xl  xl:flex items-center justify-center">
+        <div className="absolute hidden  bg-indigo-400 h-12 w-[42%] bottom-2 left-2 rounded-4xl  lg:flex items-center justify-center">
           <p className="text-white text-sm">Aprende con naturalidad</p>
         </div>
       </div>
-      <div className=" xl:hidden  bg-indigo-400 h-12 w-full  rounded-4xl  flex items-center justify-center">
+      <div className=" lg:hidden  bg-indigo-400 h-12 w-full  rounded-4xl  flex items-center justify-center">
         <p className="text-white text-sm">Aprende con naturalidad</p>
       </div>
-      <div className="relative bg-[#7fe9fe] xl:bg-transparent rounded-4xl xl:rounded-none  col-span-3 row-span-4 z-2 flex flex-col gap-8 items-center">
+      <div className="relative bg-[#7fe9fe] lg:bg-transparent rounded-4xl lg:rounded-none  col-span-3 row-span-4 z-2 flex flex-col gap-8 items-center">
         <img
           src="/comentL.png"
-          className="hidden xl:block xl:w-full xl:h-full absolute z-0"
+          className="hidden lg:block lg:w-full lg:h-full absolute z-0"
           alt=""
         />
         <h1 className=" relative text-3xl font-bold pt-12 px-12 text-gray-100 z-10">
@@ -58,20 +58,20 @@ export default function AboutSection() {
           aprender dentro y fuera de la clase, logrando tus metas rápidamente.
         </p>
         <img
-          className="absolute bottom-4 left-12 z-10 w-40 h-30 xl:w-50 xl:h-40"
+          className="absolute bottom-4 left-12 z-10 w-40 h-30 lg:w-50 lg:h-40"
           src="/libros.png"
           alt=""
         />
 
-        <div className="absolute hidden  bg-indigo-400 h-12 w-[280px] bottom-1 right-0 rounded-4xl  xl:flex items-center justify-center">
+        <div className="absolute hidden  bg-indigo-400 h-12 w-[42%] bottom-1 right-0 rounded-4xl  lg:flex items-center justify-center">
           <p className="text-white text-sm">Aprende con naturalidad</p>
         </div>
       </div>
-      <div className="xl:hidden  bg-indigo-400 h-12 w-full  rounded-4xl  flex items-center justify-center">
+      <div className="lg:hidden  bg-indigo-400 h-12 w-full  rounded-4xl  flex items-center justify-center">
         <p className="text-white text-sm">Aprende con naturalidad</p>
       </div>
 
-      <div className=" relative col-span-2 row-span-4  bg-pink-100 rounded-4xl  h-72 xl:h-98 shadow-lg  px-4 pt-4 xl:px-10 xl:pt-10">
+      <div className=" relative col-span-2 row-span-4  bg-pink-100 rounded-4xl  h-72 lg:h-98 shadow-lg  px-4 pt-4 lg:px-10 lg:pt-10">
         <h1 className="text-3xl font-bold text-[#C27AFF]">
           Educación Hecha a Tu Medida
         </h1>
