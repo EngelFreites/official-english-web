@@ -5,7 +5,7 @@ export default function HeroFeatureSection() {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setShow(true), 100); 
+    const timer = setTimeout(() => setShow(true), 100);
     return () => clearTimeout(timer);
   }, []);
 
@@ -33,8 +33,9 @@ export default function HeroFeatureSection() {
             <MessageSquare className="h-6 w-6 text-green-600" />
           </div>
           <div>
-            <div className="font-semibold text-gray-900">Conversación Real</div>
-            <div className="text-sm text-gray-600">Práctica con nativos</div>
+            <div className="font-semibold text-lg text-gray-900">
+              Conversación Real
+            </div>
           </div>
         </div>
       </div>
