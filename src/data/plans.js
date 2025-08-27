@@ -1,15 +1,30 @@
 export const plans = Object.entries({
   corporate: {
     title: "Plan Corporativo",
-    text: `Nuestro servicio es el indicado para las empresas que quieren potenciar las habilidades de sus equipos, no sólo porque saben que los llevará a obtener mejores resultados e impulsar sus negocios, si no también porque saben que una persona en constante aprendizaje, es una persona calificada y motivada para crecer dentro de la empresa.\n\nOfrecemos sesiones individuales y grupales en las que practicamos un "blend" de inglés general y de negocios, para que los participantes puedan desenvolverse en una reunión de trabajo, pero también logren mantener conversaciones fuera de la oficina con clientes, en viajes de trabajo y otras actividades que no se reduzcan sencillamente a un lenguaje empresarial.\n\nDiseñamos un plan de aprendizaje flexible que busca primero satisfacer las necesidades inmediatas de comunicación, para luego ahondar en los detalles que hacen al discurso convincente y persuasivo.`,
+    text: `Nuestro servicio es el indicado para las empresas que quieren potenciar las habilidades de sus equipos, no sólo porque saben que los llevará a obtener mejores resultados e impulsar sus negocios, si no también porque saben que una persona en constante aprendizaje, es una persona calificada y motivada para crecer dentro de la empresa.
+             
+    Ofrecemos sesiones individuales y grupales en las que practicamos un "blend" de inglés general y de negocios, para que los participantes puedan desenvolverse en una reunión de trabajo, pero también logren mantener conversaciones fuera de la oficina con clientes, en viajes de trabajo y otras actividades que no se reduzcan sencillamente a un lenguaje empresarial.
+              
+    Ofrecemos también planes intensivos y preparación para exámenes internacionales. 
+          .`,
   },
   intensive: {
-    title: "Plan Intensivo",
-    text: `Se practican habilidades de gramática, listening, speaking y vocabulario. Tal como lo indica el nombre, el ritmo de la clase es intenso, veloz, y se prioriza la consolidación de conocimientos. El coach evaluará alalumno con frecuencia, idealmente al finalizar cada unidad de aprendizaje o al completar dos de ellas.\n\n Es elegido por personas que necesitan alcanzar unobjetivo puntual y que cuentan con altos niveles de concentración, así como también con el tiempo para comprometerse con dos horas semanales con una asistencia del 90%.`,
+    title: "Sesiones particulares",
+    text: `Brindamos capacitaciones para individuos que quieren aprender desde cero o perfeccionarse. 
+
+    Nuestras sesiones se diseñan a partir de la primera conversación con el participante y las adaptamos encuentro tras encuentro para que nuestro cliente exprima hasta la última gota de su hora y se beneficie al máximo. 
+
+    No nos importa tu edad ni tu nivel: trabajamos para comprenderte y abordar tus objetivos de la mejor manera. ¿Cuál es? La que se adapte a tus intereses, necesidades y tiempos. 
+`,
   },
   certifications: {
-    title: "Certificaciones\nInternacionales",
-    text: `La empresa podrá decidir si los participantes tendrán derecho a rendir los exámenes internacionales. La coordinación se encargará de las inscripciones, a abonar por la empresa. Para ello, deberán tomar la decisión con antelación, dado que las inscripciones a exámenes internacionales se cierran en momentos específicos del año.\n\n Se podrá ejecutar el mismo programa sin la necesidad de presentarse a rendir. La consultora evaluará con el mismo criterio y escrutinio el nivel.`,
+    title: `Exámenes 
+            Internacionales`,
+    text: `
+    Es el plan indicado para quienes quieren desafiarse, estudiar o trabajar en el exterior y quieren un plan de estudio estructurado que tenga como fin último rendir un examen internacional. 
+          
+    Trabajamos con exámenes varios, tales como Cambridge, Ielts, TOEFL y Duolingo, entre otros. 
+`,
   },
   conversation: {
     title: "Conversacion",
