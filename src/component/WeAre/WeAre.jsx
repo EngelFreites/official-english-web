@@ -6,7 +6,7 @@ export default function WeAre() {
       <Title>¿Quiénes somos?</Title>
 
       <div className="flex gap-16 relative">
-        <div class="absolute -top-6 left-0 w-[720px] h-[620px] bg-indigo-800 opacity-20 blur-2xl"></div>
+        <div class="absolute -top-6 left-0 w-[720px] h-[620px] bg-indigo-400 opacity-20 blur-2xl"></div>
         <p className="text-lg text-gray-800 whitespace-pre-line">
           Somos un equipo de <strong>múltiples nacionalidades</strong> y edades
           que comparten el <strong>compromiso</strong> y entusiasmo por ayudar a
