@@ -58,6 +58,13 @@
   animation: title 1s ease-in-out;
 }
 
+.highlight {
+  background-color: rgba(253, 230, 138, 0.7);
+  padding: 0 0.2em;
+  border-radius: 0.2em;
+  display: inline-block;
+  transform: skewX(-5deg);
+}
 @keyframes title {
   0% {
     transform: translateX(-100px);

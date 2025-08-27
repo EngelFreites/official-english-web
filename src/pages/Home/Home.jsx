@@ -12,6 +12,7 @@ import TypewriterParagraph from "../../component/TypewriterParagraph/TypewriterP
 import HeroFeatureSection from "../../component/HeroFeatureSection/HeroFeatureSection";
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import WhatsappButton from "../../component/WhatsappButton/WhatsappButton";
+import WeAre from "../../component/WeAre/WeAre";
 
 function Home() {
   const count = useMotionValue(0);
@@ -78,7 +79,7 @@ function Home() {
         </section>
 
         <ClientesLogos />
-
+        <WeAre />
         <AboutSection />
         <Plans />
         <StudentReviews />
