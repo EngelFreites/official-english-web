@@ -7,7 +7,6 @@ import ClientesLogos from "../../component/ClientsLogos/ClientesLogos";
 import StudentReviews from "../../component/StudentReviews/StudentReviews";
 import Footer from "../../component/Footer/Footer";
 import Header from "../../component/Header/Header";
-import PricingPlans from "../../component/PricingPlans/PricingPlans";
 import { useEffect } from "react";
 import TypewriterParagraph from "../../component/TypewriterParagraph/TypewriterParagraph";
 import HeroFeatureSection from "../../component/HeroFeatureSection/HeroFeatureSection";
@@ -81,9 +80,7 @@ function Home() {
         <ClientesLogos />
 
         <AboutSection />
-
         <Plans />
-        <PricingPlans />
         <StudentReviews />
         <Email />
         <WhatsappButton />
