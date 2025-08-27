@@ -1,15 +1,94 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+.logo-slide-track {
+  animation: slide 50s linear infinite;
+  width: 3276px;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1638px);
+  }
+}
+.clip-path-1 {
+  clip-path: polygon(
+    30% 0%,
+    95% 0,
+    100% 14%,
+    100% 100%,
+    70% 100%,
+    0 100%,
+    0% 70%,
+    0 0
+  );
+}
+
+.clip-path-2 {
+  clip-path: polygon(
+    30% 0%,
+    89% 0,
+    100% 14%,
+    100% 100%,
+    70% 100%,
+    0 100%,
+    0% 70%,
+    0 0
+  );
+}
+
+.animate-scroll {
+  view-timeline-name: --reveral;
+  animation-name: scroll;
+  animation-fill-mode: both;
+  animation-timeline: --reveral;
+  animation-range: entry 25% cover 50%;
+}
+
+.animate-title {
+  animation: title 1s ease-in-out;
+}
+
+@keyframes title {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes scroll {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@layer components {
+  .logo-slider {
+    @apply relative overflow-hidden before:absolute before:left-0 before:top-0 before:z-10 before:w-[56px] before:h-full before:bg-gradient-to-r before:from-white before:to-transparent after:absolute after:right-0 after:top-0 after:z-10 after:w-[56px] after:h-full after:bg-gradient-to-l after:from-white after:to-transparent;
+  }
+
+  .logo-slide-track {
+    @apply flex items-center; /* Remove animate-slide */
+  }
+
+  .logo-slide {
+    @apply w-[150px] min-w-[150px] mx-4;
+  }
 }
