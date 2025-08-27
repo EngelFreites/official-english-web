@@ -42,16 +42,18 @@ function Home() {
                 </div>
 
                 <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6 animate-title">
-                  Domina el inglés con profesores nativos certificados 🎓
+                  Dominá el inglés a través de la acción⚡
                 </h1>
 
                 <TypewriterParagraph>
-                  Nuestro método único te ayuda a pensar y hablar en inglés de
-                  forma natural. Aprenderás el idioma como lo hacen los nativos,
-                  con ejercicios prácticos y conversación real.
+                  {`No son sólo clases. Son sesiones de inmersión en materiales 
+                  y conversaciones reales. Nuestro método te ayuda a pensar y
+                  hablar en inglés de forma natural.
+                  ¿Nuestra motivación? Que tus ideas no conozcan fronteras.
+                  Tu mensaje podrá ser comprendido por todos.`}
                 </TypewriterParagraph>
 
-                <div className="flex flex-col sm:flex-row gap-4 mb-12">
+                <div className="flex flex-col sm:flex-row gap-4 mb-8 mt-8">
                   <button className="px-8 py-4 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition-colors">
                     Empieza tu viaje
                   </button>
