@@ -1,5 +1,5 @@
 import emailjs from "@emailjs/browser";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { z } from "zod";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { FcNext } from "react-icons/fc";
@@ -67,8 +67,10 @@ export default function Email() {
       message: "",
       honeypot: "",
     });
-    setIsSending(false);
-    setSendedEmail(true);
+    setTimeout(() => {
+      setIsSending(false);
+      setSendedEmail(true);
+    }, 1025);
   };
 
   const handleChange = (e) => {
