@@ -39,11 +39,7 @@ export default function PlansResponsive() {
                 className={`
                 flex items-center gap-4 p-4 rounded-lg shadow-md w-full
                 transition-all cursor-pointer duration-700 transform
-                ${
-                  plan === key
-                    ? "border-1 border-indigo-400 bg-blue-50"
-                    : "bg-white"
-                }
+                ${plan === key ? "border-shadow bg-blue-50" : "bg-white"}
                 ${
                   visibleItems.includes(index.toString())
                     ? "opacity-100 translate-y-0"
@@ -77,7 +73,7 @@ export default function PlansResponsive() {
                     : "max-h-0 opacity-0"
                 }`}
               >
-                <div className="flex flex-col items-center text-center max-w-full relative">
+                <div className="flex flex-col items-center text-center max-w-full relative p-4">
                   <div className="text-left px-8 max-w-7xl">
                     <h2 className="text-2xl font-bold text-gray-800 mb-4 whitespace-pre-line text-center">
                       {plans[index][1].title}
