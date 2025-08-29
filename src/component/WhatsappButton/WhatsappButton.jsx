@@ -6,9 +6,9 @@ export default function WhatsappButton() {
       href="https://wa.me/+5491158120567"
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-16 right-16 z-999"
+      className="fixed bottom-16 right-4 z-999"
     >
-      <FaWhatsapp className="h-18 w-18 " color="green" />
+      <FaWhatsapp className="h-14 w-14 " color="green" />
     </a>
   );
 }
