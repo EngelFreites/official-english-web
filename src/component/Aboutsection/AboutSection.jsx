@@ -5,7 +5,7 @@ export default function AboutSection() {
       id="about"
       className="  max-w-7xl mx-auto p-4 sm:px-6 lg:px-8 flex flex-col justify-center items-center"
     >
-      <Title margin={758}>Cómo Te Acompañamos en Tu Aprendizaje</Title>
+      <Title>Cómo Te Acompañamos en Tu Aprendizaje</Title>
       <div className="relative flex flex-col lg:grid lg:grid-cols-5 lg:grid-rows-8 gap-6">
         <div className=" relative col-span-2 row-span-4 bg-gradient-to-b bg-purple-400 rounded-4xl  h-72 lg:h-98 shadow-lg  px-4 pt-4 lg:px-10 lg:pt-10">
           <h1 className="text-3xl font-bold text-[#FEF08A]">
