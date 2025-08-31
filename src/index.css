@@ -58,6 +58,13 @@
   animation: title 1s ease-in-out;
 }
 
+.highlight {
+  background-color: rgba(253, 230, 138, 0.7);
+  padding: 0 0.2em;
+  border-radius: 0.2em;
+  display: inline-block;
+  transform: skewX(-5deg);
+}
 @keyframes title {
   0% {
     transform: translateX(-100px);
@@ -91,4 +98,10 @@
   .logo-slide {
     @apply w-[150px] min-w-[150px] mx-4;
   }
+}
+
+.border-shadow {
+  box-shadow: 0px 0px 0px 2px rgba(129, 140, 248, 1);
+  -webkit-box-shadow: 0px 0px 0px 2px rgba(129, 140, 248, 1);
+  -moz-box-shadow: 0px 0px 0px 2px rgba(129, 140, 248, 1);
 }

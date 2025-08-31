@@ -7,12 +7,12 @@ import ClientesLogos from "../../component/ClientsLogos/ClientesLogos";
 import StudentReviews from "../../component/StudentReviews/StudentReviews";
 import Footer from "../../component/Footer/Footer";
 import Header from "../../component/Header/Header";
-import PricingPlans from "../../component/PricingPlans/PricingPlans";
 import { useEffect } from "react";
 import TypewriterParagraph from "../../component/TypewriterParagraph/TypewriterParagraph";
 import HeroFeatureSection from "../../component/HeroFeatureSection/HeroFeatureSection";
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import WhatsappButton from "../../component/WhatsappButton/WhatsappButton";
+import WeAre from "../../component/WeAre/WeAre";
 
 function Home() {
   const count = useMotionValue(0);
@@ -79,11 +79,9 @@ function Home() {
         </section>
 
         <ClientesLogos />
-
+        <WeAre />
         <AboutSection />
-
         <Plans />
-        <PricingPlans />
         <StudentReviews />
         <Email />
         <WhatsappButton />
