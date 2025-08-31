@@ -2,10 +2,10 @@ import Title from "../Title/Title";
 
 export default function WeAre() {
   return (
-    <section className="flex flex-col py-32 px-6 max-w-7xl mx-auto">
+    <section className="flex flex-col py-32 px-6 max-w-7xl mx-auto ">
       <Title>¿Quiénes somos?</Title>
 
-      <div className="flex gap-16 relative">
+      <div className="flex flex-col lg:flex-row justify-center items-center gap-16 relative">
         <div class="absolute -top-6 left-0 w-[720px] h-[620px] bg-indigo-400 opacity-20 blur-2xl"></div>
         <p className="text-lg text-gray-800 whitespace-pre-line">
           Somos un equipo de <strong>múltiples nacionalidades</strong> y edades
@@ -28,15 +28,11 @@ export default function WeAre() {
           que simplifican la curva de aprendizaje para que la{" "}
           <strong>motivación</strong> se mantenga intacta.
         </p>
+
         <img
           src="weare.png"
           alt="quines somos"
-          className="w-[400px] h-[400px] rounded-2xl z-10"
-        />
-        <img
-          src="/cuadrado.png"
-          className=" -right-8 -top-8 hidden rotate-44 sm:block absolute w-20 "
-          alt=""
+          className=" w-[600px] lg:w-full bg-cover bg-no-repeat h-full rounded-2xl"
         />
       </div>
     </section>
