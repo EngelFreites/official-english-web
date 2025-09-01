@@ -6,8 +6,8 @@ export default function WeAre() {
       <Title>¿Quiénes somos?</Title>
 
       <div className="flex flex-col lg:flex-row justify-center items-center gap-16 relative">
-        <div class="absolute -top-6 left-0 w-[720px] h-[620px] bg-indigo-400 opacity-20 blur-2xl"></div>
-        <p className="text-lg text-gray-800 whitespace-pre-line">
+        <div class="absolute top-0 left-0  w-[90vw] h-[100vh]  bg-indigo-500 opacity-30 blur-3xl "></div>
+        <p className="text-lg text-gray-800 whitespace-pre-line z-2">
           Somos un equipo de <strong>múltiples nacionalidades</strong> y edades
           que comparten el <strong>compromiso</strong> y entusiasmo por ayudar a
           nuestros clientes a <strong>cumplir sus objetivos</strong>. Trabajar
@@ -32,7 +32,7 @@ export default function WeAre() {
         <img
           src="weare.png"
           alt="quines somos"
-          className=" w-[600px] lg:w-full bg-cover bg-no-repeat h-full rounded-2xl"
+          className=" w-[600px] lg:w-full bg-cover bg-no-repeat h-full rounded-2xl z-2"
         />
       </div>
     </section>
