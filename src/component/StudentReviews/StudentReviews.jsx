@@ -24,7 +24,7 @@ export default function StudentReviews() {
                 />
                 <div className="flex flex-col">
                   <p>{review.student_name}</p>
-                  <p className="text-gray-400 text-sm">@userStudent</p>
+                  <p className="text-gray-400 text-sm">{review.occupation}</p>
                 </div>
               </div>
               <div className="flex items-center gap-2 bg-gray-100 rounded-3xl px-2">
