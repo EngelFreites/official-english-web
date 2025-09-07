@@ -76,14 +76,16 @@ export default function AboutSection() {
 
         <div className=" relative col-span-2 row-span-4  bg-pink-100 rounded-4xl  h-72 lg:h-98 shadow-lg  px-4 pt-4 lg:px-10 lg:pt-10">
           <h1 className="text-3xl font-bold text-[#C27AFF]">
-            Educación Hecha a Tu Medida
+            Impulsamos tu Comunicación Integral
           </h1>
           <p className="text-xl text-[#C27AFF] mt-10 font-semibold">
-            Ofrecemos clases dinámicas y adaptadas a cada estudiante, ajustando
-            los contenidos y ritmos según tus necesidades.
+            Te brindamos herramientas para que desarrolles una comunicación
+            completa y efectiva. La confianza es clave para expresarte con
+            seguridad, y te acompañamos con estrategias y tips prácticos
+            para alcanzarla.
           </p>
           <img
-            className="absolute bottom-4 w-40 h-30 right-4"
+            className="absolute bottom-4 w-30 h-20 right-4"
             src="/learnEnglish.png"
             alt=""
           />
