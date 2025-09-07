@@ -32,7 +32,7 @@ export default function Header() {
               Inicio
             </button>
             <button
-              onClick={() => scrollToSection("PricingPlans")}
+              onClick={() => scrollToSection("aboutUs")}
               className="cursor-pointer text-gray-700 hover:text-indigo-600 px-3 py-2 text-sm font-medium"
             >
               Sobre Nosotros
@@ -50,7 +50,7 @@ export default function Header() {
               Metodología
             </button>
             <button
-              onClick={() => scrollToSection("Coments")}
+              onClick={() => scrollToSection("StudentReviews")}
               className="cursor-pointer text-gray-700 hover:text-indigo-600 px-3 py-2 text-sm font-medium"
             >
               Comentarios
