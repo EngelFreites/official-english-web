@@ -31,10 +31,10 @@ function Home() {
           className="py-20 bg-gradient-to-b from-indigo-50 to-white"
           id="inicio"
         >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className=" flex justify-center items-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="inline-flex items-center px-4 py-2 rounded-full bg-indigo-100 text-indigo-700 mb-6">
+              <div className="flex flex-col gap-4">
+                <div className="inline-flex items-center px-4 py-2 rounded-full bg-indigo-100 text-indigo-700 w-90">
                   <Globe2 className="h-5 w-5 mr-2" />
                   <span className="text-sm font-medium">
                     Aprende inglés de forma natural
@@ -53,7 +53,7 @@ function Home() {
                   Tu mensaje podrá ser comprendido por todos.`}
                 </TypewriterParagraph>
 
-                <div className="flex flex-col sm:flex-row gap-4 mb-8 mt-8">
+                <div className="flex flex-col sm:flex-row gap-4">
                   <button className="px-8 py-4 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition-colors">
                     Empieza tu viaje
                   </button>

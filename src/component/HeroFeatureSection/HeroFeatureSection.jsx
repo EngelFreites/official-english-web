@@ -41,17 +41,19 @@ export default function HeroFeatureSection() {
       </div>
 
       <div
-        className={`absolute -right-8 bottom-12 bg-white rounded-lg shadow-xl p-4 w-64 transform transition-all duration-1000 ${
+        className={`absolute -right-2 lg:-right-8 bottom-12 bg-white rounded-lg shadow-xl p-4 w-64 transform transition-all duration-1000 ${
           show ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"
         }`}
       >
-        <div className="flex items-center gap-3">
-          <div className="bg-blue-100 p-2 rounded-lg">
+        <div className=" items-center gap-3 flex">
+          <div className="bg-blue-100 p-2 rounded-lg ">
             <BookOpen className="h-6 w-6 text-blue-600" />
           </div>
           <div>
             <div className="font-semibold text-gray-900">Método Efectivo</div>
-            <div className="text-sm text-gray-600">Aprende más rápido</div>
+            <div className="hidden lg:block text-sm text-gray-600">
+              Aprende más rápido
+            </div>
           </div>
         </div>
       </div>

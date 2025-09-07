@@ -4,7 +4,7 @@ export default function StudentReviews() {
   return (
     <section
       id="StudentReviews"
-      className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 "
+      className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 flex flex-col justify-center items-center  "
     >
       <Title className="text-center">Comentarios</Title>
       <div className="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4  animate-scroll">
@@ -24,7 +24,7 @@ export default function StudentReviews() {
                 />
                 <div className="flex flex-col">
                   <p>{review.student_name}</p>
-                  <p className="text-gray-400 text-sm">@userStudent</p>
+                  <p className="text-gray-400 text-sm">{review.occupation}</p>
                 </div>
               </div>
               <div className="flex items-center gap-2 bg-gray-100 rounded-3xl px-2">

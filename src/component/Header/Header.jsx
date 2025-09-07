@@ -1,3 +1,4 @@
+import { px } from "framer-motion";
 import { GraduationCap, Menu } from "lucide-react";
 
 export default function Header() {
@@ -20,10 +21,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <GraduationCap className="h-8 w-8 text-indigo-600" />
-            <span className="ml-2 text-xl font-bold text-gray-900">
-              GlobalEnglish
-            </span>
+            <img src="eh-logo.png" alt="logo english over here" width={60} />
           </div>
 
           <nav className="hidden md:flex space-x-8">
@@ -34,10 +32,16 @@ export default function Header() {
               Inicio
             </button>
             <button
+              onClick={() => scrollToSection("aboutUs")}
+              className="cursor-pointer text-gray-700 hover:text-indigo-600 px-3 py-2 text-sm font-medium"
+            >
+              Sobre Nosotros
+            </button>
+            <button
               onClick={() => scrollToSection("about")}
               className="cursor-pointer text-gray-700 hover:text-indigo-600 px-3 py-2 text-sm font-medium"
             >
-              Nosotros
+              Nuestro Enfoque
             </button>
             <button
               onClick={() => scrollToSection("Plans")}
@@ -46,10 +50,10 @@ export default function Header() {
               Metodología
             </button>
             <button
-              onClick={() => scrollToSection("PricingPlans")}
+              onClick={() => scrollToSection("StudentReviews")}
               className="cursor-pointer text-gray-700 hover:text-indigo-600 px-3 py-2 text-sm font-medium"
             >
-              Precios
+              Comentarios
             </button>
             <button
               onClick={() => scrollToSection("contact")}
