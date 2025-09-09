@@ -2,7 +2,10 @@ import Title from "../Title/Title";
 
 export default function WeAre() {
   return (
-    <section className="flex flex-col py-32 px-6 max-w-7xl mx-auto ">
+    <section
+      id="aboutUs"
+      className="flex flex-col py-32 px-6 max-w-7xl mx-auto "
+    >
       <Title>¿Quiénes somos?</Title>
 
       <div className="flex flex-col lg:flex-row justify-center items-center gap-16 relative">
