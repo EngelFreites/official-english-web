@@ -3,7 +3,7 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="  max-w-7xl mx-auto p-4 sm:px-6 lg:px-8 flex flex-col justify-center items-center"
+      className="  max-w-7xl mx-auto p-20 sm:px-6 lg:px-8 flex flex-col justify-center items-center"
     >
       <Title>Cómo Te Acompañamos en Tu Aprendizaje</Title>
       <div className="relative flex flex-col lg:grid lg:grid-cols-5 lg:grid-rows-8 gap-6">

@@ -4,7 +4,7 @@ export default function WeAre() {
   return (
     <section
       id="aboutUs"
-      className="flex flex-col py-32 px-6 max-w-7xl mx-auto "
+      className="flex flex-col p-20 sm:px-6 lg:px-8  max-w-7xl mx-auto "
     >
       <Title>¿Quiénes somos?</Title>
 
