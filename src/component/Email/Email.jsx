@@ -55,10 +55,10 @@ export default function Email() {
     setIsSending(true);
 
     await emailjs.sendForm(
-      "service_jm71qq8",
-      "template_nswdgng",
+      "service_snfdx08",
+      "template_wnkvwg2",
       e.target,
-      "RHl8UWYvr6R2mOdhc"
+      "bb91HrG2Gq95n-5eO"
     );
 
     setErrors({});
@@ -84,7 +84,7 @@ export default function Email() {
   return (
     <section
       id="contact"
-      className="max-w-4xl mx-auto  mb-8 relative z-0 flex flex-col justify-center items-center"
+      className="max-w-4xl mx-auto p-20 sm:px-6 lg:px-8  mb-8 relative z-0 flex flex-col justify-center items-center"
     >
       <Title> Contactanos! </Title>
       <div className=" p-4 bg-gradient-to-r from-indigo-400  to-purple-600 rounded-lg ">
