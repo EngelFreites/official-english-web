@@ -4,7 +4,7 @@ export default function StudentReviews() {
   return (
     <section
       id="StudentReviews"
-      className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 flex flex-col justify-center items-center  "
+      className="max-w-7xl mx-auto p-20 sm:px-6 lg:px-8 flex flex-col justify-center items-center  "
     >
       <Title className="text-center">Comentarios</Title>
       <div className="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4  animate-scroll">

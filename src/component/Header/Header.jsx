@@ -1,7 +1,6 @@
-import { px } from "framer-motion";
-import { GraduationCap, Menu } from "lucide-react";
+import { Menu } from "lucide-react";
 
-export default function Header() {
+export default function Header({ setOpenMenu, openMenu }) {
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -64,7 +63,10 @@ export default function Header() {
           </nav>
 
           <div className="md:hidden">
-            <button className="p-2 rounded-md text-gray-700 hover:text-indigo-600">
+            <button
+              className="p-2 rounded-md text-gray-700 hover:text-indigo-600"
+              onClick={() => setOpenMenu(!openMenu)}
+            >
               <Menu className="h-6 w-6" />
             </button>
           </div>
