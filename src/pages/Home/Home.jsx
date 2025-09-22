@@ -12,7 +12,7 @@ import HeroFeatureSection from "../../component/HeroFeatureSection/HeroFeatureSe
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import WhatsappButton from "../../component/WhatsappButton/WhatsappButton";
 import WeAre from "../../component/WeAre/WeAre";
-import { MenuResponsive } from "../../component/menuResponsive/menuResponsive";
+import MenuResponsive from "../../component/MenuResponsive/MenuResponsive";
 import { AnimatePresence } from "framer-motion";
 
 function Home() {
