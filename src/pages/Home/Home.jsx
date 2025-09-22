@@ -1,22 +1,24 @@
-import { GraduationCap, Globe2, Menu, Users, Trophy } from "lucide-react";
+import { Globe2, Users, Trophy } from "lucide-react";
 import Plans from "../../component/Plans/Plans";
 import Email from "../../component/Email/Email";
 import AboutSection from "../../component/Aboutsection/AboutSection";
-import { Link } from "react-router";
 import ClientesLogos from "../../component/ClientsLogos/ClientesLogos";
 import StudentReviews from "../../component/StudentReviews/StudentReviews";
 import Footer from "../../component/Footer/Footer";
 import Header from "../../component/Header/Header";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import TypewriterParagraph from "../../component/TypewriterParagraph/TypewriterParagraph";
 import HeroFeatureSection from "../../component/HeroFeatureSection/HeroFeatureSection";
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import WhatsappButton from "../../component/WhatsappButton/WhatsappButton";
 import WeAre from "../../component/WeAre/WeAre";
+import MenuResponsive from "../../component/menuResponsive/menuResponsive";
+import { AnimatePresence } from "framer-motion";
 
 function Home() {
   const count = useMotionValue(0);
   const rounded = useTransform(count, Math.round);
+  const [openMenu, setOpenMenu] = useState(false);
 
   useEffect(() => {
     const animation = animate(count, 5000, { duration: 5 });
@@ -24,9 +26,15 @@ function Home() {
   }, [count]);
 
   return (
-    <div className="min-h-screen bg-white">
-      <Header />
-      <main className="pt-16">
+    <div className={` bg-white ${openMenu ? " h-lvh overflow-hidden" : ""}`}>
+      <Header setOpenMenu={setOpenMenu} openMenu={openMenu} />
+
+      <main className={`pt-16  `}>
+        <AnimatePresence mode="wait">
+          {openMenu && (
+            <MenuResponsive setOpenMenu={setOpenMenu} openMenu={openMenu} />
+          )}
+        </AnimatePresence>
         <section
           className="py-20 bg-gradient-to-b from-indigo-50 to-white"
           id="inicio"
