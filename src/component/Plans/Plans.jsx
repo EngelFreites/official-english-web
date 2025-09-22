@@ -23,7 +23,7 @@ export default function Plans() {
   return (
     <section
       id="Plans"
-      className="flex flex-col p-20 sm:px-6 lg:px-8 max-w-7xl mx-auto"
+      className="flex flex-col py-20 sm:px-6 lg:px-8 max-w-7xl mx-auto"
     >
       <Title>Nuestros Planes</Title>
       <p className="text-lg text-gray-600">
