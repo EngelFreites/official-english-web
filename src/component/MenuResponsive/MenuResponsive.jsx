@@ -1,7 +1,7 @@
 import { FaArrowRight } from "react-icons/fa";
 import { motion } from "framer-motion";
 
-export function MenuResponsive({ openMenu, setOpenMenu }) {
+export default function MenuResponsive({ openMenu, setOpenMenu }) {
   const handleScroll = (id) => {
     setOpenMenu(!openMenu);
 
