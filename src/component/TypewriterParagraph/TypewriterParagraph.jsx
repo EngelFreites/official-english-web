@@ -14,7 +14,7 @@ export default function TypewriterParagraph({ children }) {
 
   return (
     <div>
-      <p className="text-xl text-gray-600 whitespace-pre-line">
+      <p className="text-xl text-gray-600 whitespace-pre-line h-[250px] sm:h-[175px]">
         {children.slice(0, index)}
         <span className="inline-block animate-pulse">|</span>
       </p>
