@@ -68,13 +68,11 @@ export default function PlansResponsive() {
               </button>
               <div
                 className={`transition-all duration-500 ease-in-out overflow-hidden ${
-                  plan === key
-                    ? "max-h-[500px] opacity-100 mt-8"
-                    : "max-h-0 opacity-0"
+                  plan === key ? "h-fit opacity-100 mt-8" : "max-h-0 opacity-0"
                 }`}
               >
-                <div className="flex flex-col items-center text-center max-w-full relative p-4">
-                  <div className="text-left px-8 max-w-7xl">
+                <div className="flex flex-col items-start text-center max-w-full relative p-4">
+                  <div className="text-left px-8 h-fit">
                     <h2 className="text-2xl font-bold text-gray-800 mb-4 whitespace-pre-line text-center">
                       {plans[index][1].title}
                     </h2>
