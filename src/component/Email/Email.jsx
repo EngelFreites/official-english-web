@@ -1,10 +1,11 @@
 import emailjs from "@emailjs/browser";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { z } from "zod";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { FcNext } from "react-icons/fc";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import Title from "../Title/Title";
+import { MdCancel } from "react-icons/md";
 
 const formSchema = z.object({
   name: z.string().min(1, "El nombre es obligatorio"),
@@ -54,23 +55,34 @@ export default function Email() {
 
     setIsSending(true);
 
-    await emailjs.sendForm(
-      "service_snfdx08",
-      "template_wnkvwg2",
-      e.target,
-      "bb91HrG2Gq95n-5eO"
-    );
-
-    setErrors({});
-    setForm({
-      name: "",
-      email: "",
-      message: "",
-      honeypot: "",
-    });
+    try {
+      await emailjs.sendForm(
+        "service_snfdx08",
+        "template_wnkvwg2",
+        e.target,
+        "bb91HrG2Gq95n-5eO"
+      );
+      setTimeout(() => {
+        setIsSending(false);
+        setSendedEmail(true);
+      }, 1025);
+    } catch (e) {
+      if (e.status == 400) {
+        setErrors({
+          server:
+            "No se pudo conectar al servicio. Por favor, intenta nuevamente más tarde.",
+        });
+      }
+    } finally {
+      setForm({
+        name: "",
+        email: "",
+        message: "",
+        honeypot: "",
+      });
+    }
     setTimeout(() => {
       setIsSending(false);
-      setSendedEmail(true);
     }, 1025);
   };
 
@@ -80,6 +92,7 @@ export default function Email() {
       [e.target.name]: e.target.value,
     });
   };
+  console.log();
 
   return (
     <section
@@ -96,6 +109,13 @@ export default function Email() {
                 <br />
                 tu camino hoy! ✨
               </h2>
+
+              {errors.server && (
+                <div className="inline-flex items-center px-4 py-2 mb-4 rounded-full bg-red-100 text-red-500 w-auto gap-4">
+                  <MdCancel size={25} />
+                  <span className="text-sm font-medium">{errors.server}</span>
+                </div>
+              )}
 
               {isSending ? (
                 <div className="flex justify-center animate-fadeIn h-[200px]">
