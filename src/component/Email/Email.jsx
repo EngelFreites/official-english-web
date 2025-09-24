@@ -202,15 +202,15 @@ export default function Email() {
               <div className="space-y-2 mt-4">
                 <div className="flex items-center space-x-3">
                   <Phone className="w-5 h-5" />
-                  <span>+1 234 567 890</span>
+                  <span>+54 9 11 5812-0567</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5" />
-                  <span>contacto@empresa.com</span>
+                  <span>florencia.presta.87@gmail.com</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin className="w-5 h-5" />
-                  <span>Calle Principal 123, Ciudad</span>
+                  <span>Buenos Aires, Argentina</span>
                 </div>
               </div>
             </div>
