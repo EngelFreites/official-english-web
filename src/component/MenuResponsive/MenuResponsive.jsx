@@ -45,7 +45,7 @@ export default function MenuResponsive({ openMenu, setOpenMenu }) {
         </a>
         <a
           className="text-3xl cursor-pointer transition-transform duration-300 hover:scale-110 hover:text-indigo-600"
-          onClick={() => handleScroll("Plns")}
+          onClick={() => handleScroll("Plans")}
         >
           Metodología
         </a>
