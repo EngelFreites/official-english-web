@@ -1,22 +1,13 @@
 import { FaArrowRight } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { scrollToSection } from "../../utils/scrollToSection";
 
 export default function MenuResponsive({ openMenu, setOpenMenu }) {
   const handleScroll = (id) => {
     setOpenMenu(!openMenu);
 
     setTimeout(() => {
-      const element = document.getElementById(id);
-      if (element) {
-        const headerOffset = 70; // altura del header
-        const elementPosition = element.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.scrollY - headerOffset;
-
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: "smooth",
-        });
-      }
+      scrollToSection(id);
     }, 500);
   };
 

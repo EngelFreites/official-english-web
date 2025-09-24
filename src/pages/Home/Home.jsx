@@ -14,6 +14,7 @@ import WhatsappButton from "../../component/WhatsappButton/WhatsappButton";
 import WeAre from "../../component/WeAre/WeAre";
 import MenuResponsive from "../../component/MenuResponsive/MenuResponsive";
 import { AnimatePresence } from "framer-motion";
+import { scrollToSection } from "../../utils/scrollToSection.js";
 
 function Home() {
   const count = useMotionValue(0);
@@ -62,10 +63,16 @@ function Home() {
                 </TypewriterParagraph>
 
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <button className="px-8 py-4 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition-colors">
+                  <button
+                    className="px-8 py-4 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition-colors cursor-pointer"
+                    onClick={() => scrollToSection("Plans")}
+                  >
                     Empieza tu viaje
                   </button>
-                  <button className="px-8 py-4 bg-white text-indigo-600 rounded-lg font-semibold border-2 border-indigo-600 hover:bg-indigo-50 transition-colors">
+                  <button
+                    className="px-8 py-4 bg-white text-indigo-600 rounded-lg font-semibold border-2 border-indigo-600 hover:bg-indigo-50 transition-colors cursor-pointer "
+                    onClick={() => scrollToSection("contact")}
+                  >
                     Clase de prueba gratis
                   </button>
                 </div>
